@@ -8,6 +8,7 @@
 4. Run `npm install`
 5. Run `npm audit fix` (in case of vulnerabilities)
 6. Run `npm run dev`
+7. If you see this warning: _Browserslist: caniuse-lite is outdated_, then run `npx update-browserslist-db@latest`
 
 
 <br/>
