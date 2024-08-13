@@ -1,4 +1,20 @@
-# Startup - Free Next.js Startup Website Template
+# GL ENSIAS Website
+
+## Getting Started
+
+1. Install nvm: https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+2. Run `nvm install 20.16.0`
+3. Run `nvm use 20.16.0`
+4. Run `npm install`
+5. Run `npm audit fix` (in case of vulnerabilities)
+6. Run `npm run dev`
+
+
+<br/>
+<br/>
+
+
+## Startup - Free Next.js Startup Website Template
 
 Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
 
