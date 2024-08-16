@@ -34,7 +34,7 @@ const Pricing = () => {
               className="flex cursor-pointer items-center"
             >
               <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
+                <div className="h-5 w-14 rounded-full bg-[#353943] shadow-inner"></div>
                 <div
                   className={`${
                     isMonthly ? "" : "translate-x-full"
