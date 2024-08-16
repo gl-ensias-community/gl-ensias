@@ -15,14 +15,14 @@ const SignupPage = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="shadow-three mx-auto max-w-[500px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
+              <div className="mx-auto max-w-[500px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   Create your account
                 </h3>
                 <p className="mb-11 text-center text-base font-medium text-body-color">
                   It’s totally free and super easy
                 </p>
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
+                <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       width="20"
@@ -59,7 +59,7 @@ const SignupPage = () => {
                   Sign in with Google
                 </button>
 
-                <button className="border-stroke dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
+                <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       fill="currentColor"
@@ -93,7 +93,7 @@ const SignupPage = () => {
                       type="text"
                       name="name"
                       placeholder="Enter your full name"
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8">
@@ -108,7 +108,7 @@ const SignupPage = () => {
                       type="email"
                       name="email"
                       placeholder="Enter your Email"
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8">
@@ -123,7 +123,7 @@ const SignupPage = () => {
                       type="password"
                       name="password"
                       placeholder="Enter your Password"
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                      className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                     />
                   </div>
                   <div className="mb-8 flex">
@@ -171,7 +171,7 @@ const SignupPage = () => {
                     </label>
                   </div>
                   <div className="mb-6">
-                    <button className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
+                    <button className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
                       Sign up
                     </button>
                   </div>
@@ -226,8 +226,8 @@ const SignupPage = () => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#ec4b38" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -237,8 +237,8 @@ const SignupPage = () => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#ec4b38" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
