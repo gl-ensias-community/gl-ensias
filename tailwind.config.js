@@ -38,11 +38,11 @@ module.exports = {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#121723",
-        dark: "#1D2430",
+        black: "#1e2228",
+        dark: "#252830",
         primary: "#EE372F",
         yellow: "#FBB040",
-        "bg-color-dark": "#171C28",
+        "bg-color-dark": "#21252e",
         "body-color": {
           DEFAULT: "#788293",
           dark: "#959CB1",
@@ -53,7 +53,7 @@ module.exports = {
         },
         gray: {
           ...colors.gray,
-          dark: "#1E232E",
+          dark: "#21252d",
           light: "#f9f0f0",
         },
       },
