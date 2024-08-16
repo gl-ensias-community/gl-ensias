@@ -6,7 +6,7 @@
     </linearGradient>
     <linearGradient id="b">
         <stop offset="0" stop-color="#ec4b38" stop-opacity=".5" />
-        <stop offset="1" stop-color="#2441b6" stop-opacity="0" />
+        <stop offset="1" stop-color="#353943" stop-opacity="0" />
     </linearGradient>
     <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="-18.9868" x2="202.082" xlink:href="#b"
         y1="176.5" y2="533.363" />
@@ -15,7 +15,7 @@
     <linearGradient id="e" gradientUnits="userSpaceOnUse" x1="1080.2" x2="1132.87" y1="121.062"
         y2="340.496">
         <stop offset="0" stop-color="#ec4b38" stop-opacity=".31" />
-        <stop offset="1" stop-color="#2441b6" stop-opacity="0" />
+        <stop offset="1" stop-color="#353943" stop-opacity="0" />
     </linearGradient>
     <path
         d="m0 87 263.536 174 659.834-260 516.63 224.5m0 76.5-466.409-63.5-696.63 323.5-276.961-187"
