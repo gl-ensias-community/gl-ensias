@@ -11,6 +11,17 @@ import {
   useSidebar,
 } from '@rewind-ui/core';
 import { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { Book } from '@/components/icons/Book';
+import { Briefcase } from '@/components/icons/Briefcase';
+import { EnvelopeOpen } from '@/components/icons/EnvelopeOpen';
+import { Key } from '@/components/icons/Key';
+import { RocketLaunch } from '@/components/icons/RocketLaunch';
+import { Shield } from '@/components/icons/Shield';
+import { Sliders } from '@/components/icons/Sliders';
+import { LifeRing } from '@/components/icons/LifeRing';
+import { Users } from '@/components/icons/Users';
 
 export default function Dashboard({
   children,
@@ -24,7 +35,7 @@ export default function Dashboard({
 
   return (
     <div className="relative antialiased flex flex-row bg-slate-100">
-      
+
       <Sidebar
         color={color}
         onToggle={(state: SidebarState) => {
@@ -34,15 +45,25 @@ export default function Dashboard({
       >
         <Sidebar.Head>
           <Sidebar.Head.Logo>
-            {/* <Logo /> */}
+            <Link
+              href="/"
+              className={`header-logo block w-full`}
+            >
+              <Image
+                src="/images/logo/logo.png"
+                alt="logo"
+                width={30}
+                height={30}
+              />
+            </Link>
           </Sidebar.Head.Logo>
-          <Sidebar.Head.Title>Rewind-UI</Sidebar.Head.Title>
+          <Sidebar.Head.Title>GL ENSIAS</Sidebar.Head.Title>
           <Sidebar.Head.Toggle />
         </Sidebar.Head>
 
         <Sidebar.Nav>
           <Sidebar.Nav.Section>
-            <Sidebar.Nav.Section.Item /*icon={<RocketLaunch />}*/ label="Dashboard" href="#" active>
+            <Sidebar.Nav.Section.Item icon={<RocketLaunch />} label="Dashboard" href="#" active>
               <Sidebar.Nav.Section isChild>
                 <Sidebar.Nav.Section.Item
                   as="button"
@@ -85,8 +106,8 @@ export default function Dashboard({
 
           <Sidebar.Nav.Section>
             <Sidebar.Nav.Section.Title>Management</Sidebar.Nav.Section.Title>
-            <Sidebar.Nav.Section.Item /*icon={<Briefcase />}*/ label="Clients" href="#" />
-            <Sidebar.Nav.Section.Item /*icon={<Users />}*/ label="Users" as="button">
+            <Sidebar.Nav.Section.Item icon={<Briefcase />} label="Clients" href="#" />
+            <Sidebar.Nav.Section.Item icon={<Users />} label="Users" as="button">
               <Sidebar.Nav.Section isChild>
                 <Sidebar.Nav.Section.Item
                   icon={<span className="w-1 h-1 rounded bg-transparent" />}
@@ -105,23 +126,23 @@ export default function Dashboard({
                 />
               </Sidebar.Nav.Section>
             </Sidebar.Nav.Section.Item>
-            <Sidebar.Nav.Section.Item /*icon={<Shield />}*/ label="Roles" href="#" />
-            <Sidebar.Nav.Section.Item /*icon={<Key />}*/ label="Permissions" href="#" />
-            <Sidebar.Nav.Section.Item /*icon={<Sliders />}*/ label="Settings" href="#" />
+            <Sidebar.Nav.Section.Item icon={<Shield />} label="Roles" href="#" />
+            <Sidebar.Nav.Section.Item icon={<Key />} label="Permissions" href="#" />
+            <Sidebar.Nav.Section.Item icon={<Sliders />} label="Settings" href="#" />
           </Sidebar.Nav.Section>
 
           <Sidebar.Nav.Section>
             <Sidebar.Nav.Section.Title>Support</Sidebar.Nav.Section.Title>
-            <Sidebar.Nav.Section.Item /*icon={<LifeRing />}*/ label="Contact" href="#" />
-            <Sidebar.Nav.Section.Item /*icon={<EnvelopeOpen />}*/ label="Tickets" href="#" />
+            <Sidebar.Nav.Section.Item icon={<LifeRing />} label="Contact" href="#" />
+            <Sidebar.Nav.Section.Item icon={<EnvelopeOpen />} label="Tickets" href="#" />
             <Sidebar.Separator />
-            <Sidebar.Nav.Section.Item /*icon={<Book />}*/ label="Documentation" href="#" />
+            <Sidebar.Nav.Section.Item icon={<Book />} label="Documentation" href="#" />
           </Sidebar.Nav.Section>
         </Sidebar.Nav>
 
         <Sidebar.Footer>
           <div className="flex flex-col justify-center items-center text-sm">
-            <span className="font-semibold">Rewind-UI</span>
+            <span className="font-semibold">GL ENSIAS</span>
             <span>version x.y.z</span>
           </div>
         </Sidebar.Footer>
@@ -166,7 +187,7 @@ export default function Dashboard({
         <div className="w-full h-full p-8">
           <Breadcrumbs>
             <Breadcrumbs.Item href="/">
-              {/* <RocketLaunch /> */}
+              { <RocketLaunch /> }
             </Breadcrumbs.Item>
             <Breadcrumbs.Item>Dashboard</Breadcrumbs.Item>
           </Breadcrumbs>
