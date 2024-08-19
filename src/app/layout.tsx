@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   const pathName = usePathname()
 
-  if (pathName != "/dashboard") {
+  if (!pathName.startsWith("/dashboard")) {
     return (
       <html suppressHydrationWarning lang="en">
         <head>
