@@ -112,7 +112,7 @@ export default function Dashboard({
                 <Sidebar.Nav.Section.Item
                   icon={<span className="w-1 h-1 rounded bg-transparent" />}
                   label="List all"
-                  href="#"
+                  href="dashboard/users"
                 />
                 <Sidebar.Nav.Section.Item
                   icon={<span className="w-1 h-1 rounded bg-transparent" />}
