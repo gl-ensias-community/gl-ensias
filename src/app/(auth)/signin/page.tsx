@@ -1,15 +1,35 @@
-import Link from "next/link";
-import { Metadata } from "next";
+"use client" 
 
-export const metadata: Metadata = {
-  title: "Sign In Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign In Page for Startup Nextjs Template",
-  // other metadata
-};
+import Link from "next/link";
+import { Form, SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { SigninSchema } from "@/app/schemas";
+import Head from "next/head";
 
 const SigninPage = () => {
+  const form = useForm<z.infer<typeof SigninSchema>>({
+    resolver: zodResolver(SigninSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const { register, handleSubmit, formState: { errors } } = form;
+
+  const onSubmit: SubmitHandler<z.infer<typeof SigninSchema>> = (data) => {
+    console.log(data);
+  }
+
   return (
     <>
+      {/* Metadata */}
+      <Head>
+        <title>Sign In Page | Free Next.js Template for Startup and SaaS</title>
+        <meta name="description" content="This is Sign In Page for Startup Nextjs Template" />
+      </Head>
+
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -84,7 +104,9 @@ const SigninPage = () => {
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[70px] bg-body-color/50 sm:block"></span>
                 </div>
-                <form>
+
+                <form onSubmit={form.handleSubmit(onSubmit)}>
+                  {/* Email input */}
                   <div className="mb-8">
                     <label
                       htmlFor="email"
@@ -93,13 +115,15 @@ const SigninPage = () => {
                       Your Email
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      placeholder="Enter your Email"
+                      type="text"
+                      placeholder="ex: name@um5.ac.ma"
                       className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("email", {required: true})}
                     />
+                    {errors.email && <span className="text-red-500">{errors.email.message} <br /><span className="italic">ex: name.lastName@um5.ac.ma</span></span>}
                   </div>
 
+                  {/* Password input */}
                   <div className="mb-8">
                     <label
                       htmlFor="password"
@@ -109,10 +133,11 @@ const SigninPage = () => {
                     </label>
                     <input
                       type="password"
-                      name="password"
                       placeholder="Enter your Password"
                       className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      {...register("password", {required: true})}
                     />
+                    {errors.password && <span className="text-red-500">{errors.password.message}</span>}
                   </div>
 
                   <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
@@ -161,7 +186,7 @@ const SigninPage = () => {
                   </div>
 
                   <div className="mb-6">
-                    <button className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button type="submit" className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
                       Sign in
                     </button>
                   </div>
