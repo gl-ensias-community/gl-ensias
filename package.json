@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@rewind-ui/core": "^0.20.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.1.0",
@@ -19,6 +20,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.2",
     "react-modal-video": "^2.0.1",
     "startup-nextjs-template": "file:",
     "zod": "^3.23.8"
