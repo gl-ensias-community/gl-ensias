@@ -6,6 +6,8 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/@rewind-ui/core/dist/theme/styles/Sidebar.styles.{cjs,d.ts,d.ts.map,js}',
+    './node_modules/@rewind-ui/core/dist/theme/styles/Calendar.styles.{cjs,d.ts,d.ts.map,js}'
   ],
   darkMode: "class",
   theme: {
@@ -77,5 +79,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+    require('@tailwindcss/forms'),
+  ],
 };
