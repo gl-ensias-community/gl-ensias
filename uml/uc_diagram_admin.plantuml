@@ -1,0 +1,37 @@
+@startuml name Admin Use Case Diagram
+
+title Admin Use Case Diagram
+
+actor Member
+actor Admin
+Member <|-- Admin
+
+note left of Admin
+An Admin is a
+Member who has
+special privileges
+end note
+
+rectangle "Website" {
+    ' Use Cases for Admin:
+    usecase "View Dashboard" as view_dashboard
+    usecase "Manage Members" as manage_members
+    usecase "Manage Resources" as manage_resources
+    usecase "Manage Projects" as manage_projects
+    usecase "Manage News" as manage_news
+    usecase "Manage Calendar" as manage_calendar
+    usecase "Manage Features" as manage_features
+}
+
+left to right direction
+
+' Associations for Admin
+Admin --> view_dashboard
+Admin --> manage_members
+Admin --> manage_resources
+Admin --> manage_projects
+Admin --> manage_news
+Admin --> manage_calendar
+Admin --> manage_features
+
+@enduml

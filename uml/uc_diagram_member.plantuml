@@ -1,0 +1,40 @@
+@startuml name Member Use Case Diagram
+
+title Member Use Case Diagram
+
+actor Visitor
+actor Member
+Visitor <|-d- Member
+
+note left of Member
+A Member is a 
+logged in person.
+He can be: 
+- 1st Year
+- 2nd Year
+- 3rd Year
+- 4th Year
+- Alumni
+end note
+
+rectangle "Website" {
+    ' Use Cases for Member:
+    usecase "View Resources" as view_resources
+    usecase "View Projects" as view_projects
+    usecase "View News" as view_news
+    usecase "View Calendar" as view_calendar
+    usecase "View Features" as view_features
+    usecase "Sign Out" as logout
+}
+
+left to right direction
+
+' Associations for Member
+Member --> view_resources
+Member --> view_projects
+Member --> view_news
+Member --> view_calendar
+Member --> view_features
+Member --> logout
+
+@enduml
