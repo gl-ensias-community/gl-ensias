@@ -8,205 +8,315 @@ const Footer = () => {
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
+            {/* Section Logo et Réseaux sociaux */}
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
                     src="/images/logo/logo.png"
-                    alt="logo"
+                    alt="ENSIAS logo"
                     className="dark:hidden"
                     width={140}
                     height={140}
                   />
                   <Image
                     src="/images/logo/logo.png"
-                    alt="logo"
+                    alt="ENSIAS logo"
                     className="hidden dark:block"
                     width={140}
                     height={140}
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  The Software Engineering (GL) branch at ENSIAS (École Nationale Supérieure d'Informatique et d'Analyse des Systèmes) is committed to producing highly skilled computer engineers.
                 </p>
-                <div className="flex items-center">
+                <li className="flex items-center mb-4">
+                    <svg
+                      className="w-8 h-8 mr-3 text-body-color dark:text-body-color-dark"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v12h16V6H4zm8 6l8-5H4l8 5zm0 2L4 9v8h16v-8l-8 5z" />
+                    </svg>
+                    <p className="text-base text-body-color dark:text-body-color-dark">
+                      Email:{" "}
+                      <a href="mailto:info@ensias.ma" className="hover:text-primary">
+                      gl.ensias.promo@gmail.com
+                      </a>
+                    </p>
+                  </li>
+                <p>Follow us</p>
+                <div className="flex items-center mt-4">
+                  {/* Facebook */}
                   <a
-                    href="/"
-                    aria-label="social-link"
+                    href="https://www.facebook.com/profile.php?id=61563803917528"
+                    aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
+                      className="w-6 h-6"
                       fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
-                        fill="currentColor"
-                      />
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3V2z"
+                      ></path>
                     </svg>
                   </a>
+                  {/* Twitter */}
                   <a
-                    href="/"
-                    aria-label="social-link"
+                    href="https://x.com/gl_ensias"
+                    aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
+                      className="w-6 h-6"
                       fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
-                        fill="currentColor"
-                      />
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43 3a9.12 9.12 0 01-2.83 1.08A4.48 4.48 0 0016.4 2a4.48 4.48 0 00-4.46 5.48A12.94 12.94 0 013 4.1a4.48 4.48 0 001.39 5.98 4.44 4.44 0 01-2.05-.56v.06a4.48 4.48 0 003.57 4.4 4.52 4.52 0 01-1.18.16 4.45 4.45 0 01-.84-.08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.86 12.86 0 006.29 1.84A12.94 12.94 0 0021 7.46c0-.2 0-.39-.02-.59A9.23 9.23 0 0023 3z"
+                      ></path>
                     </svg>
                   </a>
+                  {/* LinkedIn */}
                   <a
-                    href="/"
-                    aria-label="social-link"
+                    href="https://www.linkedin.com/company/gl-ensias/"
+                    aria-label="LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="14"
-                      viewBox="0 0 18 14"
-                      className="fill-current"
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
                     >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
+                      <path d="M4.983 3.5c0 1.375-1.116 2.5-2.492 2.5C1.117 6 0 4.875 0 3.5 0 2.125 1.117 1 2.492 1 3.867 1 4.983 2.125 4.983 3.5zM0 8.653h4.984v12.351H0V8.653zm8.757 0h4.784v1.68h.066c.666-1.264 2.293-2.597 4.719-2.597 5.043 0 5.973 3.32 5.973 7.632v8.634h-4.988v-7.662c0-1.825-.033-4.168-2.538-4.168-2.541 0-2.93 1.986-2.93 4.036v7.794H8.757V8.653z" />
                     </svg>
                   </a>
+                  {/* Instagram */}
                   <a
-                    href="/"
-                    aria-label="social-link"
+                    href=" https://www.instagram.com/gl_ensias/"
+                    aria-label="Instagram"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="17"
-                      height="16"
-                      viewBox="0 0 17 16"
-                      className="fill-current"
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
                     >
-                      <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.302.975.975 1.24 2.242 1.302 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.302 3.608-.975.975-2.242 1.24-3.608 1.302-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.302-.975-.975-1.24-2.242-1.302-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.302-3.608.975-.975 2.242-1.24 3.608-1.302 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.755 0 8.332.013 7.052.072 5.764.132 4.608.365 3.685 1.288c-.922.922-1.156 2.078-1.216 3.366C2.013 6.332 2 6.755 2 12s.013 5.668.072 6.948c.06 1.288.293 2.444 1.216 3.366.922.922 2.078 1.156 3.366 1.216 1.28.059 1.703.072 6.948.072s5.668-.013 6.948-.072c1.288-.06 2.444-.293 3.366-1.216.922-.922 1.156-2.078 1.216-3.366.059-1.28.072-1.703.072-6.948s-.013-5.668-.072-6.948c-.06-1.288-.293-2.444-1.216-3.366-.922-.922-2.078-1.156-3.366-1.216-1.28-.059-1.703-.072-6.948-.072zM12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.125A3.964 3.964 0 018.037 12 3.964 3.964 0 0112 8.037 3.964 3.964 0 0115.963 12 3.964 3.964 0 0112 15.963zm6.406-11.845a1.44 1.44 0 110 2.881 1.44 1.44 0 010-2.881z" />
                     </svg>
                   </a>
+                  {/* YouTube */}
+                  <a
+                    href="https://www.youtube.com/@gl_ensias"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 10l5 3-5 3V10z"
+                      ></path>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M22.54 6.42A2.42 2.42 0 0020.15 5H3.85A2.42 2.42 0 001.46 6.42a29.94 29.94 0 000 11.16A2.42 2.42 0 003.85 19h16.3a2.42 2.42 0 002.39-1.42 29.94 29.94 0 000-11.16z"
+                      ></path>
+                    </svg>
+                  </a>
+                 {/* TikTok-like Icon */}
+                  <a
+                      href="https://www.tiktok.com/@gl_ensias"
+                      aria-label="TikTok"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                  <svg
+                      className="w-6 h-6 fill-current" 
+                      viewBox="0 0 24 24" 
+                      xmlns="http://www.w3.org/2000/svg"
+                  >
+                  <path d="M12 2C17.523 2 22 6.477 22 12s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2C7.589 4 4 7.589 4 12s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zm0-2a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm6-7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-6-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3 4.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z"/>
+                  </svg>
+                  </a>
+
+
+
                 </div>
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            {/* Section Contact ENSIAS */}
+            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12 mt-11 ml-60">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  ENSIAS
                 </h2>
                 <ul>
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  {/* Icône maison pour l'adresse */}
+                  <li className="flex items-center mb-4">
+                    <svg
+                      className="w-10 h-10 mr-3 text-body-color dark:text-body-color-dark"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      Blog
-                    </Link>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 12l2-2m0 0l7-7 7 7m-2 2v7a2 2 0 01-2 2H9a2 2 0 01-2-2v-7m10 0l-2 2m-6-2l-2 2"
+                      ></path>
+                    </svg>
+                    <p className="text-base text-body-color dark:text-body-color-dark">
+                      Avenue Mohammed Ben Abdallah Regragui, Madinat Al Irfane, BP 713, Agdal Rabat, Maroc
+                    </p>
                   </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  {/* Icône email */}
+                  <li className="flex items-center mb-4">
+                    <svg
+                      className="w-8 h-8 mr-3 text-body-color dark:text-body-color-dark"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
                     >
-                      Pricing
-                    </Link>
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v12h16V6H4zm8 6l8-5H4l8 5zm0 2L4 9v8h16v-8l-8 5z" />
+                    </svg>
+                    <p className="text-base text-body-color dark:text-body-color-dark">
+                      Email:{" "}
+                      <a href="mailto:info@ensias.ma" className="hover:text-primary">
+                      n.mhirich@um5r.ac.ma
+                      </a>
+                    </p>
                   </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  {/* Lien "More Information" */}
+                  <li className="mb-4">
+                      <Link 
+                          href="http://ensias.um5.ac.ma/" 
+                          className="text-base text-body-color dark:text-body-color-dark hover:text-primary"
                     >
-                      About
-                    </Link>
+                    More Information
+            </Link>
                   </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  {/* Social Media Icons under More Information */}
+                  <div className="flex items-center mt-4">
+                    {/* Facebook */}
+                    <a
+                      href="https://web.facebook.com/Ensias-104706825356957"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      TOS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3V2z"
+                        ></path>
+                      </svg>
+                    </a>
+                    {/* Twitter */}
+                    <a
+                      href="https://twitter.com/ensias_official"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43 3a9.12 9.12 0 01-2.83 1.08A4.48 4.48 0 0016.4 2a4.48 4.48 0 00-4.46 5.48A12.94 12.94 0 013 4.1a4.48 4.48 0 001.39 5.98 4.44 4.44 0 01-2.05-.56v.06a4.48 4.48 0 003.57 4.4 4.52 4.52 0 01-1.18.16 4.45 4.45 0 01-.84-.08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.86 12.86 0 006.29 1.84A12.94 12.94 0 0021 7.46c0-.2 0-.39-.02-.59A9.23 9.23 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    {/* LinkedIn */}
+                    <a
+                      href="https://www.linkedin.com/in/ensias"
+                      aria-label="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Refund Policy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M4.983 3.5c0 1.375-1.116 2.5-2.492 2.5C1.117 6 0 4.875 0 3.5 0 2.125 1.117 1 2.492 1 3.867 1 4.983 2.125 4.983 3.5zM0 8.653h4.984v12.351H0V8.653zm8.757 0h4.784v1.68h.066c.666-1.264 2.293-2.597 4.719-2.597 5.043 0 5.973 3.32 5.973 7.632v8.634h-4.988v-7.662c0-1.825-.033-4.168-2.538-4.168-2.541 0-2.93 1.986-2.93 4.036v7.794H8.757V8.653z" />
+                    </svg>
+                    </a>
+                    {/* Instagram */}
+                    <a
+                      href=" https://www.instagram.com/ensias.official/"
+                      aria-label="Instagram"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Open Support Ticket
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Terms of Use
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
-                    </Link>
-                  </li>
+                      <svg
+                        className="w-5 h-5"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.302.975.975 1.24 2.242 1.302 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.302 3.608-.975.975-2.242 1.24-3.608 1.302-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.302-.975-.975-1.24-2.242-1.302-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.302-3.608.975-.975 2.242-1.24 3.608-1.302 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.755 0 8.332.013 7.052.072 5.764.132 4.608.365 3.685 1.288c-.922.922-1.156 2.078-1.216 3.366C2.013 6.332 2 6.755 2 12s.013 5.668.072 6.948c.06 1.288.293 2.444 1.216 3.366.922.922 2.078 1.156 3.366 1.216 1.28.059 1.703.072 6.948.072s5.668-.013 6.948-.072c1.288-.06 2.444-.293 3.366-1.216.922-.922 1.156-2.078 1.216-3.366.059-1.28.072-1.703.072-6.948s-.013-5.668-.072-6.948c-.06-1.288-.293-2.444-1.216-3.366-.922-.922-2.078-1.156-3.366-1.216-1.28-.059-1.703-.072-6.948-.072zM12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.125A3.964 3.964 0 018.037 12 3.964 3.964 0 0112 8.037 3.964 3.964 0 0115.963 12 3.964 3.964 0 0112 15.963zm6.406-11.845a1.44 1.44 0 110 2.881 1.44 1.44 0 010-2.881z" />
+                      </svg>
+                    </a>
+                
+                  </div>
                 </ul>
               </div>
             </div>
@@ -215,216 +325,9 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
-              <a
-                href="http://uideck.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                UIdeck
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://nextjstemplates.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Next.js Templates
-              </a>
+              &copy; 2024 GL-ENSIAS. All rights reserved.
             </p>
           </div>
-        </div>
-        <div className="absolute right-0 top-14 z-[-1]">
-          <svg
-            width="55"
-            height="99"
-            viewBox="0 0 55 99"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
-            <mask
-              id="mask0_94:899"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="99"
-              height="99"
-            >
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="#ec4b38"
-              />
-            </mask>
-            <g mask="url(#mask0_94:899)">
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="url(#paint0_radial_94:899)"
-              />
-              <g opacity="0.8" filter="url(#filter0_f_94:899)">
-                <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
-              </g>
-            </g>
-            <defs>
-              <filter
-                id="filter0_f_94:899"
-                x="12.4852"
-                y="-15.1763"
-                width="82.7646"
-                height="82.7646"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="10.5"
-                  result="effect1_foregroundBlur_94:899"
-                />
-              </filter>
-              <radialGradient
-                id="paint0_radial_94:899"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
-              >
-                <stop stopOpacity="0.47" />
-                <stop offset="1" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <div className="absolute bottom-24 left-0 z-[-1]">
-          <svg
-            width="79"
-            height="94"
-            viewBox="0 0 79 94"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.3"
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              fill="url(#paint0_linear_94:889)"
-            />
-            <rect
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              stroke="url(#paint1_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L77.1885 68.2073L50.5215 7.42229Z"
-              fill="url(#paint2_linear_94:889)"
-            />
-            <path
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L76.7963 68.2073L50.5215 7.42229Z"
-              stroke="url(#paint3_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M17.9721 93.3057L-14.9695 88.2076L46.2077 62.325L77.1885 68.2074L17.9721 93.3057Z"
-              fill="url(#paint4_linear_94:889)"
-            />
-            <path
-              d="M17.972 93.3057L-14.1852 88.2076L46.2077 62.325L77.1884 68.2074L17.972 93.3057Z"
-              stroke="url(#paint5_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_94:889"
-                x1="-41"
-                y1="21.8445"
-                x2="36.9671"
-                y2="59.8878"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_94:889"
-                x1="25.6675"
-                y1="95.9631"
-                x2="-42.9608"
-                y2="20.668"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_94:889"
-                x1="20.325"
-                y1="-3.98039"
-                x2="90.6248"
-                y2="25.1062"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_94:889"
-                x1="18.3642"
-                y1="-1.59742"
-                x2="113.9"
-                y2="80.6826"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_94:889"
-                x1="61.1098"
-                y1="62.3249"
-                x2="-8.82468"
-                y2="58.2156"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_94:889"
-                x1="65.4236"
-                y1="65.0701"
-                x2="24.0178"
-                y2="41.6598"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#ec4b38" stopOpacity="0" />
-                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
       </footer>
     </>
