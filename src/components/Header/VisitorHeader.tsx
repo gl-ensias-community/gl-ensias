@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import ThemeToggler from './ThemeToggler';
 
 const VisitorHeader = ({ sticky }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);  
   const pathname = usePathname();
 
@@ -14,7 +14,7 @@ const VisitorHeader = ({ sticky }) => {
   }, []);
 
   const toggleMenu = useCallback(() => {
-    setIsOpen(prevState => !prevState);
+    setMenuOpen(prevState => !prevState);
   }, []);
 
   const navItems = [
@@ -32,7 +32,7 @@ const VisitorHeader = ({ sticky }) => {
   return (
     <header
       className={`header left-0 top-0 z-40 flex w-full items-center ${
-        sticky ? "dark:bg-gray-800 dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"
+        sticky ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"
       }`}
     >
       <div className="container">
@@ -54,21 +54,35 @@ const VisitorHeader = ({ sticky }) => {
             <ThemeToggler />
             <button
               onClick={toggleMenu}
-              className="p-2 ml-3 text-3xl rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="p-2 ml-3 text-3xl rounded-md text-gray-800 dark:text-gray-200"
             >
-              {isOpen ? "✕" : "☰"}
+              <span
+                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                  menuOpen ? " top-[7px] rotate-45" : " "
+                }`}
+              />
+              <span
+                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                  menuOpen ? "opacity-0 " : " "
+                }`}
+              />
+              <span
+                className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                  menuOpen ? " top-[-8px] -rotate-45" : " "
+                }`}
+              />
             </button>
           </div>
 
           <nav
-            className={`absolute right-0 top-16 bg-white dark:bg-gray-800 rounded-md shadow-lg ${
-              isOpen ? "block" : "hidden"
+            className={`absolute right-0 top-16 bg-white dark:bg-dark rounded-md shadow-lg ${
+              menuOpen ? "block" : "hidden"
             } transform transition-transform duration-300 lg:flex lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
           >
             <ul className="block lg:flex lg:space-x-2">
               {navItems.map((item) => (
                 <li key={item.href} className="relative">
-                  <Link href={item.href} onClick={() => setIsOpen(false)} className={`flex py-2 px-4 text-base ${
+                  <Link href={item.href} onClick={() => setMenuOpen(false)} className={`flex py-2 px-4 text-base ${
                     pathname === item.href
                       ? "text-primary dark:text-white"
                       : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"

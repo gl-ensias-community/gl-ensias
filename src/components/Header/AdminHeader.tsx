@@ -71,7 +71,7 @@ const AdminHeader = ({ sticky }) => {
             <ThemeToggler />
             <button
               onClick={toggleMenu}
-              className="p-2 ml-3 text-3xl rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="p-2 ml-3 text-3xl rounded-md text-gray-800 dark:text-gray-200"
             >
               <span
                 className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
