@@ -6,7 +6,7 @@ import VisitorHeader from "./VisitorHeader";
 
 const HeaderSwitcher = () => {
   const [sticky, setSticky] = useState(false);
-  const [userRole, setUserRole] = useState("admin");
+  const [userRole, setUserRole] = useState("visitor"); // By default, the user is a visitor
 
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
@@ -18,10 +18,7 @@ const HeaderSwitcher = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-
-    
-    setUserRole("admin");
-
+    setUserRole("visitor"); // TODO: Get user role from the server
     return () => {
       window.removeEventListener("scroll", handleStickyNavbar);
     };
