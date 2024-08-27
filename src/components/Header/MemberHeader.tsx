@@ -118,11 +118,11 @@ const MemberHeader = ({ sticky }) => {
                   onMouseEnter={item.isDropdown ? handleMouseEnter : undefined}
                   onMouseLeave={item.isDropdown ? handleMouseLeave : undefined}
                 >
-                  <Link href={item.href} className={`flex py-2 px-6 lg:px-4 text-base ${
+                  <Link href={item.isDropdown ? "#" : item.href} className={`flex py-2 px-6 lg:px-4 text-base ${
                     pathname === item.href
                       ? "text-primary dark:text-white"
                       : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                  }`} onClick={() => setMenuOpen(false)}>
+                  }`} onClick={() => {if (!item.isDropdown) setMenuOpen(false)}}>
                     {item.label} 
                     {item.isDropdown && (
                       <>
