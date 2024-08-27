@@ -6,7 +6,7 @@ import ThemeToggler from './ThemeToggler';
 
 const VisitorHeader = ({ sticky }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(true);  // Adjusted to true initially
+  const [isMounted, setIsMounted] = useState(false);  
   const pathname = usePathname();
 
   useEffect(() => {
@@ -27,9 +27,7 @@ const VisitorHeader = ({ sticky }) => {
     { href: "/contact", label: "Contact" }
   ];
 
-  if (!isMounted) {
-    return <div>Loading...</div>; // Improved handling for initial render
-  }
+  if (!isMounted) return null;
 
   return (
     <header
@@ -37,7 +35,7 @@ const VisitorHeader = ({ sticky }) => {
         sticky ? "dark:bg-gray-800 dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="relative flex items-center justify-between w-full">
           <div className="w-60 max-w-full">
             <Link href="/">
@@ -63,11 +61,11 @@ const VisitorHeader = ({ sticky }) => {
           </div>
 
           <nav
-            className={`absolute right-4 top-16 bg-white dark:bg-gray-800 rounded-md shadow-lg ${
+            className={`absolute right-0 top-16 bg-white dark:bg-gray-800 rounded-md shadow-lg ${
               isOpen ? "block" : "hidden"
-            } transform transition-transform duration-300 lg:flex lg:space-x-12 lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
+            } transform transition-transform duration-300 lg:flex lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
           >
-            <ul className="block lg:flex lg:space-x-12">
+            <ul className="block lg:flex lg:space-x-2">
               {navItems.map((item) => (
                 <li key={item.href} className="relative">
                   <Link href={item.href} onClick={() => setIsOpen(false)} className={`flex py-2 px-4 text-base ${
