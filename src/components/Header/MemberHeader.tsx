@@ -6,7 +6,7 @@ import ThemeToggler from './ThemeToggler';
 
 const MemberHeader = ({ sticky }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
   const closeTimer = useRef(null);
@@ -24,12 +24,12 @@ const MemberHeader = ({ sticky }) => {
       clearTimeout(closeTimer.current);
       closeTimer.current = null;
     }
-    setIsFeaturesOpen(true);
+    setIsDropdownOpen(true);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
     closeTimer.current = setTimeout(() => {
-      setIsFeaturesOpen(false);
+      setIsDropdownOpen(false);
     }, 200);
   }, []);
 
@@ -38,7 +38,10 @@ const MemberHeader = ({ sticky }) => {
     { href: "/projects", label: "Projects" },
     { href: "/news", label: "News" },
     { href: "/calendar", label: "Calendar" },
-    { href: "/features", label: "Features", isDropdown: true }
+    { href: "/features", label: "Features", isDropdown: true , dropdownItems: [
+      { href: "/featuresp/fa-distributer", label: "PFA Distributer" },
+      { href: "/features/ensias-map", label: "ENSIAS Map" }
+    ] }
   ];
 
   if (!isMounted) return null;
@@ -49,7 +52,7 @@ const MemberHeader = ({ sticky }) => {
         sticky ? "dark:bg-gray-800 dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="relative flex items-center justify-between w-full">
           <div className="w-60 max-w-full">
             <Link href="/" passHref>
@@ -76,9 +79,9 @@ const MemberHeader = ({ sticky }) => {
           <nav
             className={`absolute right-4 top-16 bg-white dark:bg-gray-800 rounded-md shadow-lg ${
               isOpen ? "block" : "hidden"
-            } transform transition-transform duration-300 lg:flex lg:space-x-12 lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
+            } transform transition-transform duration-300 lg:flex lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
           >
-            <ul className="block lg:flex lg:space-x-12">
+            <ul className="block lg:flex lg:space-x-2">
               {navItems.map((item) => (
                 <li
                   key={item.href}
@@ -96,19 +99,16 @@ const MemberHeader = ({ sticky }) => {
                   {item.isDropdown && (
                     <ul
                       className={`absolute left-0 top-full bg-white dark:bg-gray-800 shadow-md rounded-md mt-1 ${
-                        isFeaturesOpen ? 'block' : 'hidden'
+                        isDropdownOpen ? 'block' : 'hidden'
                       }`}
                     >
-                      <li>
-                        <Link href="/pfa-distributer" className="block py-2 px-4 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white">
-                          PFA Distributer
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/ensias-map" className="block py-2 px-4 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white">
-                          ENSIAS Map
-                        </Link>
-                      </li>
+                      {item.dropdownItems.map((dropDownItem) => (
+                        <li key={dropDownItem.href}>
+                          <Link href={dropDownItem.href} className="block py-2 px-4 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white">
+                            {dropDownItem.label}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   )}
                 </li>
