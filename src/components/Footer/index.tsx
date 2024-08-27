@@ -8,46 +8,83 @@ const Footer = () => {
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            {/* Section Logo et Réseaux sociaux */}
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="mb-12 w-full lg:w-3/4 lg:mb-16">
+                <Link href="/" className="mb-4 inline-block">
                   <Image
                     src="/images/logo/logo.png"
-                    alt="ENSIAS logo"
+                    alt="logo"
                     className="dark:hidden"
                     width={140}
                     height={140}
                   />
                   <Image
                     src="/images/logo/logo.png"
-                    alt="ENSIAS logo"
+                    alt="logo"
                     className="hidden dark:block"
                     width={140}
                     height={140}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                <p className="mb-4 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   The Software Engineering (GL) branch at ENSIAS (École Nationale Supérieure d'Informatique et d'Analyse des Systèmes) is committed to producing highly skilled computer engineers.
                 </p>
                 <li className="flex items-center mb-4">
-                    <svg
-                      className="w-8 h-8 mr-3 text-body-color dark:text-body-color-dark"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v12h16V6H4zm8 6l8-5H4l8 5zm0 2L4 9v8h16v-8l-8 5z" />
-                    </svg>
-                    <p className="text-base text-body-color dark:text-body-color-dark">
-                      Email:{" "}
-                      <a href="mailto:info@ensias.ma" className="hover:text-primary">
-                      gl.ensias.promo@gmail.com
-                      </a>
-                    </p>
-                  </li>
+                  <svg
+                    className="w-8 h-8 mr-3 text-body-color dark:text-body-color-dark"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v12h16V6H4zm8 6l8-5H4l8 5zm0 2L4 9v8h16v-8l-8 5z" />
+                  </svg>
+                  <p className="text-base text-body-color dark:text-body-color-dark">
+                    Email:{" "}
+                    <a href="mailto:gl.ensias.promo@gmail.com" className="hover:text-primary">
+                    gl.ensias.promo@gmail.com
+                    </a>
+                  </p>
+                </li>
                 <p>Follow us</p>
                 <div className="flex items-center mt-4">
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/company/gl-ensias/"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    <svg
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      className="fill-current"
+                    >
+                      <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+                    </svg>
+                  </a>
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/gl_ensias/"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    <svg 
+                      width="24"
+                      height="24" 
+                      viewBox="0 0 24 24" 
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        d="M12 7.90001C11.1891 7.90001 10.3964 8.14048 9.72218 8.59099C9.04794 9.0415 8.52243 9.68184 8.21211 10.431C7.90179 11.1802 7.8206 12.0046 7.9788 12.7999C8.13699 13.5952 8.52748 14.3258 9.10088 14.8992C9.67427 15.4725 10.4048 15.863 11.2001 16.0212C11.9955 16.1794 12.8198 16.0982 13.569 15.7879C14.3182 15.4776 14.9585 14.9521 15.409 14.2779C15.8596 13.6036 16.1 12.8109 16.1 12C16.1013 11.4612 15.9962 10.9275 15.7906 10.4295C15.585 9.93142 15.2831 9.47892 14.9021 9.09794C14.5211 8.71695 14.0686 8.415 13.5706 8.20942C13.0725 8.00385 12.5388 7.8987 12 7.90001ZM12 14.67C11.4719 14.67 10.9557 14.5134 10.5166 14.22C10.0776 13.9267 9.73534 13.5097 9.53326 13.0218C9.33117 12.5339 9.2783 11.9971 9.38132 11.4791C9.48434 10.9612 9.73863 10.4854 10.112 10.112C10.4854 9.73863 10.9612 9.48434 11.4791 9.38132C11.9971 9.2783 12.5339 9.33117 13.0218 9.53326C13.5097 9.73534 13.9267 10.0776 14.22 10.5166C14.5134 10.9557 14.67 11.4719 14.67 12C14.67 12.7081 14.3887 13.3873 13.888 13.888C13.3873 14.3887 12.7081 14.67 12 14.67ZM17.23 7.73001C17.23 7.9278 17.1714 8.12114 17.0615 8.28558C16.9516 8.45003 16.7954 8.57821 16.6127 8.65389C16.43 8.72958 16.2289 8.74938 16.0349 8.7108C15.8409 8.67221 15.6628 8.57697 15.5229 8.43712C15.3831 8.29727 15.2878 8.11909 15.2492 7.92511C15.2106 7.73112 15.2304 7.53006 15.3061 7.34733C15.3818 7.16461 15.51 7.00843 15.6744 6.89855C15.8389 6.78866 16.0322 6.73001 16.23 6.73001C16.4952 6.73001 16.7496 6.83537 16.9371 7.02291C17.1247 7.21044 17.23 7.4648 17.23 7.73001ZM19.94 8.73001C19.9691 7.48684 19.5054 6.28261 18.65 5.38001C17.7522 4.5137 16.5474 4.03897 15.3 4.06001C14 4.00001 10 4.00001 8.70001 4.06001C7.45722 4.0331 6.25379 4.49652 5.35001 5.35001C4.49465 6.25261 4.03093 7.45684 4.06001 8.70001C4.00001 10 4.00001 14 4.06001 15.3C4.03093 16.5432 4.49465 17.7474 5.35001 18.65C6.25379 19.5035 7.45722 19.9669 8.70001 19.94C10.02 20.02 13.98 20.02 15.3 19.94C16.5432 19.9691 17.7474 19.5054 18.65 18.65C19.5054 17.7474 19.9691 16.5432 19.94 15.3C20 14 20 10 19.94 8.70001V8.73001ZM18.24 16.73C18.1042 17.074 17.8993 17.3863 17.6378 17.6478C17.3763 17.9093 17.064 18.1142 16.72 18.25C15.1676 18.5639 13.5806 18.6715 12 18.57C10.4228 18.6716 8.83902 18.564 7.29001 18.25C6.94608 18.1142 6.63369 17.9093 6.37223 17.6478C6.11076 17.3863 5.90579 17.074 5.77001 16.73C5.35001 15.67 5.44001 13.17 5.44001 12.01C5.44001 10.85 5.35001 8.34001 5.77001 7.29001C5.90196 6.94268 6.10547 6.62698 6.36733 6.36339C6.62919 6.09981 6.94355 5.89423 7.29001 5.76001C8.83902 5.44599 10.4228 5.33839 12 5.44001C13.5806 5.33856 15.1676 5.44616 16.72 5.76001C17.064 5.89579 17.3763 6.10076 17.6378 6.36223C17.8993 6.62369 18.1042 6.93608 18.24 7.28001C18.66 8.34001 18.56 10.84 18.56 12C18.56 13.16 18.66 15.67 18.24 16.72V16.73Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
                   {/* Facebook */}
                   <a
                     href="https://www.facebook.com/profile.php?id=61563803917528"
@@ -57,18 +94,16 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      className="w-6 h-6"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 22 22"
                       fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3V2z"
-                      ></path>
+                        d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </a>
                   {/* Twitter */}
@@ -80,52 +115,18 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      className="w-6 h-6"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 22 22"
                       fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43 3a9.12 9.12 0 01-2.83 1.08A4.48 4.48 0 0016.4 2a4.48 4.48 0 00-4.46 5.48A12.94 12.94 0 013 4.1a4.48 4.48 0 001.39 5.98 4.44 4.44 0 01-2.05-.56v.06a4.48 4.48 0 003.57 4.4 4.52 4.52 0 01-1.18.16 4.45 4.45 0 01-.84-.08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.86 12.86 0 006.29 1.84A12.94 12.94 0 0021 7.46c0-.2 0-.39-.02-.59A9.23 9.23 0 0023 3z"
-                      ></path>
-                    </svg>
-                  </a>
-                  {/* LinkedIn */}
-                  <a
-                    href="https://www.linkedin.com/company/gl-ensias/"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M4.983 3.5c0 1.375-1.116 2.5-2.492 2.5C1.117 6 0 4.875 0 3.5 0 2.125 1.117 1 2.492 1 3.867 1 4.983 2.125 4.983 3.5zM0 8.653h4.984v12.351H0V8.653zm8.757 0h4.784v1.68h.066c.666-1.264 2.293-2.597 4.719-2.597 5.043 0 5.973 3.32 5.973 7.632v8.634h-4.988v-7.662c0-1.825-.033-4.168-2.538-4.168-2.541 0-2.93 1.986-2.93 4.036v7.794H8.757V8.653z" />
-                    </svg>
-                  </a>
-                  {/* Instagram */}
-                  <a
-                    href=" https://www.instagram.com/gl_ensias/"
-                    aria-label="Instagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.302.975.975 1.24 2.242 1.302 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.302 3.608-.975.975-2.242 1.24-3.608 1.302-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.302-.975-.975-1.24-2.242-1.302-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.302-3.608.975-.975 2.242-1.24 3.608-1.302 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.755 0 8.332.013 7.052.072 5.764.132 4.608.365 3.685 1.288c-.922.922-1.156 2.078-1.216 3.366C2.013 6.332 2 6.755 2 12s.013 5.668.072 6.948c.06 1.288.293 2.444 1.216 3.366.922.922 2.078 1.156 3.366 1.216 1.28.059 1.703.072 6.948.072s5.668-.013 6.948-.072c1.288-.06 2.444-.293 3.366-1.216.922-.922 1.156-2.078 1.216-3.366.059-1.28.072-1.703.072-6.948s-.013-5.668-.072-6.948c-.06-1.288-.293-2.444-1.216-3.366-.922-.922-2.078-1.156-3.366-1.216-1.28-.059-1.703-.072-6.948-.072zM12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.125A3.964 3.964 0 018.037 12 3.964 3.964 0 0112 8.037 3.964 3.964 0 0115.963 12 3.964 3.964 0 0112 15.963zm6.406-11.845a1.44 1.44 0 110 2.881 1.44 1.44 0 010-2.881z" />
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </a>
                   {/* YouTube */}
@@ -137,57 +138,46 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="14"
+                      viewBox="0 0 18 14"
+                      className="fill-current"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 10l5 3-5 3V10z"
-                      ></path>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M22.54 6.42A2.42 2.42 0 0020.15 5H3.85A2.42 2.42 0 001.46 6.42a29.94 29.94 0 000 11.16A2.42 2.42 0 003.85 19h16.3a2.42 2.42 0 002.39-1.42 29.94 29.94 0 000-11.16z"
-                      ></path>
+                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
                     </svg>
                   </a>
-                 {/* TikTok-like Icon */}
+                  {/* TikTok */}
                   <a
-                      href="https://www.tiktok.com/@gl_ensias"
-                      aria-label="TikTok"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    href="https://www.tiktok.com/@gl_ensias"
+                    aria-label="TikTok"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                  <svg
-                      className="w-6 h-6 fill-current" 
-                      viewBox="0 0 24 24" 
-                      xmlns="http://www.w3.org/2000/svg"
-                  >
-                  <path d="M12 2C17.523 2 22 6.477 22 12s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2C7.589 4 4 7.589 4 12s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zm0-2a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm6-7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-6-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3 4.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z"/>
+                    <svg 
+                      fill="none" 
+                      width="18" 
+                      height="18" 
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        fill="currentColor"
+                        d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"
+                      />
                   </svg>
                   </a>
-
-
-
                 </div>
               </div>
             </div>
 
-            {/* Section Contact ENSIAS */}
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12 mt-11 ml-60">
-              <div className="mb-12 lg:mb-16">
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="my-12 lg:my-16 w-full lg:w-3/4">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  ENSIAS
+                  ENSIAS UMR5
                 </h2>
                 <ul>
-                  {/* Icône maison pour l'adresse */}
                   <li className="flex items-center mb-4">
                     <svg
                       className="w-10 h-10 mr-3 text-body-color dark:text-body-color-dark"
@@ -207,7 +197,6 @@ const Footer = () => {
                       Avenue Mohammed Ben Abdallah Regragui, Madinat Al Irfane, BP 713, Agdal Rabat, Maroc
                     </p>
                   </li>
-                  {/* Icône email */}
                   <li className="flex items-center mb-4">
                     <svg
                       className="w-8 h-8 mr-3 text-body-color dark:text-body-color-dark"
@@ -224,17 +213,46 @@ const Footer = () => {
                       </a>
                     </p>
                   </li>
-                  {/* Lien "More Information" */}
-                  <li className="mb-4">
-                      <Link 
-                          href="http://ensias.um5.ac.ma/" 
-                          className="text-base text-body-color dark:text-body-color-dark hover:text-primary"
-                    >
-                    More Information
-            </Link>
-                  </li>
-                  {/* Social Media Icons under More Information */}
+                  <p>More Information</p>
                   <div className="flex items-center mt-4">
+                    {/* LinkedIn */}
+                    <a
+                      href="https://www.linkedin.com/in/ensias"
+                      aria-label="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      <svg
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                        className="fill-current"
+                      >
+                        <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+                      </svg>
+                    </a>
+                    {/* Instagram */}
+                    <a
+                      href=" https://www.instagram.com/ensias.official/"
+                      aria-label="Instagram"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      <svg 
+                      width="24"
+                      height="24" 
+                      viewBox="0 0 24 24" 
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        d="M12 7.90001C11.1891 7.90001 10.3964 8.14048 9.72218 8.59099C9.04794 9.0415 8.52243 9.68184 8.21211 10.431C7.90179 11.1802 7.8206 12.0046 7.9788 12.7999C8.13699 13.5952 8.52748 14.3258 9.10088 14.8992C9.67427 15.4725 10.4048 15.863 11.2001 16.0212C11.9955 16.1794 12.8198 16.0982 13.569 15.7879C14.3182 15.4776 14.9585 14.9521 15.409 14.2779C15.8596 13.6036 16.1 12.8109 16.1 12C16.1013 11.4612 15.9962 10.9275 15.7906 10.4295C15.585 9.93142 15.2831 9.47892 14.9021 9.09794C14.5211 8.71695 14.0686 8.415 13.5706 8.20942C13.0725 8.00385 12.5388 7.8987 12 7.90001ZM12 14.67C11.4719 14.67 10.9557 14.5134 10.5166 14.22C10.0776 13.9267 9.73534 13.5097 9.53326 13.0218C9.33117 12.5339 9.2783 11.9971 9.38132 11.4791C9.48434 10.9612 9.73863 10.4854 10.112 10.112C10.4854 9.73863 10.9612 9.48434 11.4791 9.38132C11.9971 9.2783 12.5339 9.33117 13.0218 9.53326C13.5097 9.73534 13.9267 10.0776 14.22 10.5166C14.5134 10.9557 14.67 11.4719 14.67 12C14.67 12.7081 14.3887 13.3873 13.888 13.888C13.3873 14.3887 12.7081 14.67 12 14.67ZM17.23 7.73001C17.23 7.9278 17.1714 8.12114 17.0615 8.28558C16.9516 8.45003 16.7954 8.57821 16.6127 8.65389C16.43 8.72958 16.2289 8.74938 16.0349 8.7108C15.8409 8.67221 15.6628 8.57697 15.5229 8.43712C15.3831 8.29727 15.2878 8.11909 15.2492 7.92511C15.2106 7.73112 15.2304 7.53006 15.3061 7.34733C15.3818 7.16461 15.51 7.00843 15.6744 6.89855C15.8389 6.78866 16.0322 6.73001 16.23 6.73001C16.4952 6.73001 16.7496 6.83537 16.9371 7.02291C17.1247 7.21044 17.23 7.4648 17.23 7.73001ZM19.94 8.73001C19.9691 7.48684 19.5054 6.28261 18.65 5.38001C17.7522 4.5137 16.5474 4.03897 15.3 4.06001C14 4.00001 10 4.00001 8.70001 4.06001C7.45722 4.0331 6.25379 4.49652 5.35001 5.35001C4.49465 6.25261 4.03093 7.45684 4.06001 8.70001C4.00001 10 4.00001 14 4.06001 15.3C4.03093 16.5432 4.49465 17.7474 5.35001 18.65C6.25379 19.5035 7.45722 19.9669 8.70001 19.94C10.02 20.02 13.98 20.02 15.3 19.94C16.5432 19.9691 17.7474 19.5054 18.65 18.65C19.5054 17.7474 19.9691 16.5432 19.94 15.3C20 14 20 10 19.94 8.70001V8.73001ZM18.24 16.73C18.1042 17.074 17.8993 17.3863 17.6378 17.6478C17.3763 17.9093 17.064 18.1142 16.72 18.25C15.1676 18.5639 13.5806 18.6715 12 18.57C10.4228 18.6716 8.83902 18.564 7.29001 18.25C6.94608 18.1142 6.63369 17.9093 6.37223 17.6478C6.11076 17.3863 5.90579 17.074 5.77001 16.73C5.35001 15.67 5.44001 13.17 5.44001 12.01C5.44001 10.85 5.35001 8.34001 5.77001 7.29001C5.90196 6.94268 6.10547 6.62698 6.36733 6.36339C6.62919 6.09981 6.94355 5.89423 7.29001 5.76001C8.83902 5.44599 10.4228 5.33839 12 5.44001C13.5806 5.33856 15.1676 5.44616 16.72 5.76001C17.064 5.89579 17.3763 6.10076 17.6378 6.36223C17.8993 6.62369 18.1042 6.93608 18.24 7.28001C18.66 8.34001 18.56 10.84 18.56 12C18.56 13.16 18.66 15.67 18.24 16.72V16.73Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    </a>
                     {/* Facebook */}
                     <a
                       href="https://web.facebook.com/Ensias-104706825356957"
@@ -244,18 +262,16 @@ const Footer = () => {
                       className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       <svg
-                        className="w-6 h-6"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 22 22"
                         fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3V2z"
-                        ></path>
+                          d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </a>
                     {/* Twitter */}
@@ -267,55 +283,20 @@ const Footer = () => {
                       className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       <svg
-                        className="w-6 h-6"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 22 22"
                         fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43 3a9.12 9.12 0 01-2.83 1.08A4.48 4.48 0 0016.4 2a4.48 4.48 0 00-4.46 5.48A12.94 12.94 0 013 4.1a4.48 4.48 0 001.39 5.98 4.44 4.44 0 01-2.05-.56v.06a4.48 4.48 0 003.57 4.4 4.52 4.52 0 01-1.18.16 4.45 4.45 0 01-.84-.08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.86 12.86 0 006.29 1.84A12.94 12.94 0 0021 7.46c0-.2 0-.39-.02-.59A9.23 9.23 0 0023 3z"
-                        ></path>
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </a>
-                    {/* LinkedIn */}
-                    <a
-                      href="https://www.linkedin.com/in/ensias"
-                      aria-label="LinkedIn"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M4.983 3.5c0 1.375-1.116 2.5-2.492 2.5C1.117 6 0 4.875 0 3.5 0 2.125 1.117 1 2.492 1 3.867 1 4.983 2.125 4.983 3.5zM0 8.653h4.984v12.351H0V8.653zm8.757 0h4.784v1.68h.066c.666-1.264 2.293-2.597 4.719-2.597 5.043 0 5.973 3.32 5.973 7.632v8.634h-4.988v-7.662c0-1.825-.033-4.168-2.538-4.168-2.541 0-2.93 1.986-2.93 4.036v7.794H8.757V8.653z" />
-                    </svg>
-                    </a>
-                    {/* Instagram */}
-                    <a
-                      href=" https://www.instagram.com/ensias.official/"
-                      aria-label="Instagram"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.302.975.975 1.24 2.242 1.302 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.302 3.608-.975.975-2.242 1.24-3.608 1.302-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.302-.975-.975-1.24-2.242-1.302-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.302-3.608.975-.975 2.242-1.24 3.608-1.302 1.266-.058 1.646-.07 4.85-.07m0-2.163C8.755 0 8.332.013 7.052.072 5.764.132 4.608.365 3.685 1.288c-.922.922-1.156 2.078-1.216 3.366C2.013 6.332 2 6.755 2 12s.013 5.668.072 6.948c.06 1.288.293 2.444 1.216 3.366.922.922 2.078 1.156 3.366 1.216 1.28.059 1.703.072 6.948.072s5.668-.013 6.948-.072c1.288-.06 2.444-.293 3.366-1.216.922-.922 1.156-2.078 1.216-3.366.059-1.28.072-1.703.072-6.948s-.013-5.668-.072-6.948c-.06-1.288-.293-2.444-1.216-3.366-.922-.922-2.078-1.156-3.366-1.216-1.28-.059-1.703-.072-6.948-.072zM12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.125A3.964 3.964 0 018.037 12 3.964 3.964 0 0112 8.037 3.964 3.964 0 0115.963 12 3.964 3.964 0 0112 15.963zm6.406-11.845a1.44 1.44 0 110 2.881 1.44 1.44 0 010-2.881z" />
-                      </svg>
-                    </a>
-                
                   </div>
                 </ul>
               </div>
@@ -325,9 +306,199 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              &copy; 2024 GL-ENSIAS. All rights reserved.
+              &copy; 2024 GL ENSIAS. All rights reserved.
             </p>
           </div>
+        </div>
+        <div className="absolute right-0 top-14 z-[-1]">
+          <svg
+            width="55"
+            height="99"
+            viewBox="0 0 55 99"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
+            <mask
+              id="mask0_94:899"
+              style={{ maskType: "alpha" }}
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="99"
+              height="99"
+            >
+              <circle
+                opacity="0.8"
+                cx="49.5"
+                cy="49.5"
+                r="49.5"
+                fill="#ec4b38"
+              />
+            </mask>
+            <g mask="url(#mask0_94:899)">
+              <circle
+                opacity="0.8"
+                cx="49.5"
+                cy="49.5"
+                r="49.5"
+                fill="url(#paint0_radial_94:899)"
+              />
+              <g opacity="0.8" filter="url(#filter0_f_94:899)">
+                <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_94:899"
+                x="12.4852"
+                y="-15.1763"
+                width="82.7646"
+                height="82.7646"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="10.5"
+                  result="effect1_foregroundBlur_94:899"
+                />
+              </filter>
+              <radialGradient
+                id="paint0_radial_94:899"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
+              >
+                <stop stopOpacity="0.47" />
+                <stop offset="1" stopOpacity="0" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="absolute bottom-24 left-0 z-[-1]">
+          <svg
+            width="79"
+            height="94"
+            viewBox="0 0 79 94"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              opacity="0.3"
+              x="-41"
+              y="26.9426"
+              width="66.6675"
+              height="66.6675"
+              transform="rotate(-22.9007 -41 26.9426)"
+              fill="url(#paint0_linear_94:889)"
+            />
+            <rect
+              x="-41"
+              y="26.9426"
+              width="66.6675"
+              height="66.6675"
+              transform="rotate(-22.9007 -41 26.9426)"
+              stroke="url(#paint1_linear_94:889)"
+              strokeWidth="0.7"
+            />
+            <path
+              opacity="0.3"
+              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L77.1885 68.2073L50.5215 7.42229Z"
+              fill="url(#paint2_linear_94:889)"
+            />
+            <path
+              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L76.7963 68.2073L50.5215 7.42229Z"
+              stroke="url(#paint3_linear_94:889)"
+              strokeWidth="0.7"
+            />
+            <path
+              opacity="0.3"
+              d="M17.9721 93.3057L-14.9695 88.2076L46.2077 62.325L77.1885 68.2074L17.9721 93.3057Z"
+              fill="url(#paint4_linear_94:889)"
+            />
+            <path
+              d="M17.972 93.3057L-14.1852 88.2076L46.2077 62.325L77.1884 68.2074L17.972 93.3057Z"
+              stroke="url(#paint5_linear_94:889)"
+              strokeWidth="0.7"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_94:889"
+                x1="-41"
+                y1="21.8445"
+                x2="36.9671"
+                y2="59.8878"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_94:889"
+                x1="25.6675"
+                y1="95.9631"
+                x2="-42.9608"
+                y2="20.668"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_94:889"
+                x1="20.325"
+                y1="-3.98039"
+                x2="90.6248"
+                y2="25.1062"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_94:889"
+                x1="18.3642"
+                y1="-1.59742"
+                x2="113.9"
+                y2="80.6826"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
+              </linearGradient>
+              <linearGradient
+                id="paint4_linear_94:889"
+                x1="61.1098"
+                y1="62.3249"
+                x2="-8.82468"
+                y2="58.2156"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint5_linear_94:889"
+                x1="65.4236"
+                y1="65.0701"
+                x2="24.0178"
+                y2="41.6598"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#ec4b38" stopOpacity="0" />
+                <stop offset="1" stopColor="#ec4b38" stopOpacity="0.51" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </footer>
     </>
