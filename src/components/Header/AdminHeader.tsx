@@ -92,11 +92,26 @@ const AdminHeader = ({ sticky }) => {
           </div>
 
           <nav
-            className={`absolute right-4 top-16 bg-white dark:bg-dark rounded-md shadow-lg ${
+            className={`absolute right-4 top-16 py-4 bg-white dark:bg-dark rounded-md shadow-lg ${
               menuOpen ? "block" : "hidden"
             } transform transition-transform duration-300 lg:flex lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
           >
             <ul className="block lg:flex lg:space-x-2">
+              {/* Sign Out link for small screens */}
+              <li className="relative">
+                <Link href="/signout" onClick={() => setMenuOpen(false)} className={`lg:hidden mx-4 mb-4 rounded-sm bg-primary flex py-2 px-4 text-base ${
+                  pathname === "/signout"
+                    ? "text-primary dark:text-white"
+                    : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                }`}>
+                  Sign Out
+                </Link>
+              </li>
+              {/* Divider */}
+              <li className="lg:hidden">
+                <hr className="h-0.5 w-full bg-dark dark:bg-white/10 my-2" />
+              </li>
+              {/*  Nav Items */}
               {navItems.map((item) => (
                 <li 
                   key={item.href}
