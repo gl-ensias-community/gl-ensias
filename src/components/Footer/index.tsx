@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-4 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  The Software Engineering (GL) branch at ENSIAS (École Nationale Supérieure d'Informatique et d'Analyse des Systèmes) is committed to producing highly skilled computer engineers.
+                  The Software Engineering (GL) branch at ENSIAS (École Nationale Supérieure d&apos;Informatique et d&apos;Analyse des Systèmes) is committed to producing highly skilled computer engineers.
                 </p>
                 <li className="flex items-center mb-4">
                   <svg
