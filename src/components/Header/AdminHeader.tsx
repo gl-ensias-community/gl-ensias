@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -6,8 +6,10 @@ import ThemeToggler from './ThemeToggler';
 
 const AdminHeader = ({ sticky }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
+  const closeTimer = useRef(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -17,13 +19,30 @@ const AdminHeader = ({ sticky }) => {
     setIsOpen(prevState => !prevState);
   }, []);
 
+  const handleMouseEnter = useCallback(() => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setIsDropdownOpen(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    closeTimer.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200);
+  }, []);
+
   const navItems = [
     { href: "/dashboard", label: "Dashboard" },
-    { href: "/resources", label: "Resources" },
-    { href: "/projects", label: "Projects" },
-    { href: "/news", label: "News" },
-    { href: "/calendar", label: "Calendar" },
-    { href: "/features", label: "Features", dropdown: true }
+    { href: "/resources-management", label: "Resources" },
+    { href: "/projects-management", label: "Projects" },
+    { href: "/news-management", label: "News" },
+    { href: "/calendar-management", label: "Calendar" },
+    { href: "/features-management", label: "Features", isDropdown: true, dropdownItems: [
+      { href: "/features-management/pfa-distributer", label: "PFA Distributer" },
+      { href: "/features-management/ensias-map", label: "ENSIAS Map" }
+    ] }
   ];
 
   if (!isMounted) return null;
@@ -34,7 +53,7 @@ const AdminHeader = ({ sticky }) => {
         sticky ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="relative flex items-center justify-between w-full">
           <div className="w-60 max-w-full">
             <Link href="/" passHref>
@@ -61,11 +80,16 @@ const AdminHeader = ({ sticky }) => {
           <nav
             className={`absolute right-4 top-16 bg-white dark:bg-gray-dark rounded-md shadow-lg ${
               isOpen ? "block" : "hidden"
-            } transform transition-transform duration-300 lg:flex lg:space-x-12 lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
+            } transform transition-transform duration-300 lg:flex lg:relative lg:top-0 lg:bg-transparent lg:dark:bg-transparent lg:shadow-none`}
           >
-            <ul className="block lg:flex lg:space-x-12">
+            <ul className="block lg:flex lg:space-x-2">
               {navItems.map((item) => (
-                <li key={item.href} className="relative">
+                <li 
+                  key={item.href}
+                  className={`relative ${item.isDropdown ? 'group' : ''}`}
+                  onMouseEnter={item.isDropdown ? handleMouseEnter : undefined}
+                  onMouseLeave={item.isDropdown ? handleMouseLeave : undefined}
+                >
                   <Link href={item.href} className={`flex py-2 px-4 text-base ${
                     pathname === item.href
                       ? "text-primary dark:text-white"
@@ -73,11 +97,20 @@ const AdminHeader = ({ sticky }) => {
                   }`} onClick={() => setIsOpen(false)}>
                     {item.label}
                   </Link>
-                  {item.dropdown && pathname.includes('/features') && (
-                    <div className="dropdown-content bg-white shadow-lg rounded-md">
-                      <Link href="/features/subfeature1" className="py-2 px-4 block text-dark hover:bg-gray-200">Subfeature 1</Link>
-                      <Link href="/features/subfeature2" className="py-2 px-4 block text-dark hover:bg-gray-200">Subfeature 2</Link>
-                    </div>
+                  {item.isDropdown && (
+                    <ul
+                    className={`absolute left-0 top-full bg-white dark:bg-gray-800 shadow-md rounded-md mt-1 ${
+                      isDropdownOpen ? 'block' : 'hidden'
+                    }`}
+                  >
+                    {item.dropdownItems.map((dropDownItem) => (
+                      <li key={dropDownItem.href}>
+                        <Link href={dropDownItem.href} className="block py-2 px-4 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white">
+                          {dropDownItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                   )}
                 </li>
               ))}
