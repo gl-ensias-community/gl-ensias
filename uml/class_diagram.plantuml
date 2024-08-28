@@ -4,7 +4,6 @@ class User {
   +int id
   +string email
   +string password
-  +Role role
   +Date dateJoined
 }
 
