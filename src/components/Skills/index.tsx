@@ -2,14 +2,13 @@
 import Image from "next/image";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import Shapes from "./Shapes";
-import styles from "./Skills.module.css";
 import skillsData from "./skillslData";
 
 const Skills = () => {
+  const GL_ENSIAS_InfoText =
+    'The "Software Engineering" program aims to train computer engineers specializing in Software Engineering and Information Systems. Graduates are equipped with technical expertise, autonomy, and communication skills to meet the needs of public and private organizations, enhancing their competitiveness. The curriculum offers a comprehensive scientific and technical education, including management, languages, and communication techniques, in line with national pedagogical standards. After a two-semester "tronc commun" focused on essential computer science skills, students advance in Software Engineering and Information Systems.';
   const [titleText, setTitleText] = useState("GL ENSIAS");
-  const [infoText, setInfoText] = useState(
-    'The "Software Engineering" program aims to train computer engineers specializing in Software Engineering and Information Systems. Graduates are equipped with technical expertise, autonomy, and communication skills to meet the needs of public and private organizations, enhancing their competitiveness. The curriculum offers a comprehensive scientific and technical education, including management, languages, and communication techniques, in line with national pedagogical standards. After a two-semester "tronc commun" focused on essential computer science skills, students advance in Software Engineering and Information Systems.',
-  );
+  const [infoText, setInfoText] = useState(GL_ENSIAS_InfoText);
 
   const [showTopGradient, setShowTopGradient] = useState<boolean>(true);
   const [showBottomGradient, setShowBottomGradient] = useState<boolean>(true);
@@ -64,7 +63,10 @@ const Skills = () => {
 
               {/* Column 2: Scrollable List of Skills */}
               <div className="relative w-full justify-center overflow-hidden lg:w-52">
-                <div ref={scrollableRef} className={styles.scrollableSkills}>
+                <div
+                  ref={scrollableRef}
+                  className="flex h-[700px] flex-col items-center gap-6 overflow-x-hidden overflow-y-scroll whitespace-nowrap px-2 scrollbar-none max-md:h-[120px] max-md:w-[400%] max-md:flex-row max-md:overflow-y-hidden max-md:overflow-x-scroll"
+                >
                   {skillsData.map((skill) => (
                     <div key={skill.id}>
                       <Image
@@ -79,9 +81,7 @@ const Skills = () => {
                           setTitleText(skill.title);
                         }}
                         onMouseOut={() => {
-                          setInfoText(
-                            'The "Software Engineering" program aims to train computer engineers specializing in Software Engineering and Information Systems. Graduates are equipped with technical expertise, autonomy, and communication skills to meet the needs of public and private organizations, enhancing their competitiveness. The curriculum offers a comprehensive scientific and technical education, including management, languages, and communication techniques, in line with national pedagogical standards. After a two-semester "tronc commun" focused on essential computer science skills, students advance in Software Engineering and Information Systems.',
-                          );
+                          setInfoText(GL_ENSIAS_InfoText);
                           setTitleText("GL ENSIAS");
                         }}
                       />
