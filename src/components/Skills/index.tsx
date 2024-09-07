@@ -19,13 +19,23 @@ const Skills = () => {
   const handleScroll = () => {
     const scrollElement = scrollableRef.current;
     if (scrollElement) {
-      const isAtTop = scrollElement.scrollTop === 0;
-      const isAtBottom =
-        scrollElement.scrollHeight - scrollElement.scrollTop ===
-        scrollElement.clientHeight;
+      if (window.innerWidth > 768) {
+        const isAtTop = scrollElement.scrollTop === 0;
+        const isAtBottom =
+          scrollElement.scrollHeight - scrollElement.scrollTop ===
+          scrollElement.clientHeight;
 
-      setShowTopGradient(!isAtTop);
-      setShowBottomGradient(!isAtBottom);
+        setShowTopGradient(!isAtTop);
+        setShowBottomGradient(!isAtBottom);
+      } else {
+        const isAtRight = scrollElement.scrollLeft === 0;
+        const isAtLeft =
+          scrollElement.scrollWidth - scrollElement.scrollLeft ===
+          scrollElement.clientWidth;
+
+        setShowTopGradient(!isAtRight);
+        setShowBottomGradient(!isAtLeft);
+      }
     }
   };
 
@@ -55,13 +65,85 @@ const Skills = () => {
                   src="/images/logo/logo.png"
                   alt="GL ENSIAS"
                   title="GL ENSIAS"
-                  width={400} // Adjusted width for responsiveness
-                  height={400} // Adjusted height for responsiveness
-                  className="object-contain"
+                  width={400}
+                  height={400}
+                  className="select-none object-contain"
                 />
               </div>
+              {/* Column 2: Control Arrows */}
+              {window.innerWidth > 768 && (
+                <div className="w-30 flex flex-col items-center justify-center gap-5">
+                  <div
+                    className="w-full cursor-pointer"
+                    onClick={() => {
+                      const scrollElement = scrollableRef.current;
+                      if (scrollElement) {
+                        scrollElement.scrollTop -= 4 * 140; // Scroll up 4 icons
+                      }
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width={96}
+                      height={96}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="fill-black opacity-30 hover:opacity-100 dark:fill-white"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                        ></path>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    className="w-full cursor-pointer"
+                    onClick={() => {
+                      const scrollElement = scrollableRef.current;
+                      if (scrollElement) {
+                        scrollElement.scrollTop += 4 * 140; // Scroll down 4 icons
+                      }
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width={96}
+                      height={96}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      transform="rotate(180)"
+                      className="fill-black opacity-30 hover:opacity-100 dark:fill-white"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                        ></path>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              )}
 
-              {/* Column 2: Scrollable List of Skills */}
+              {/* Column 3: Scrollable List of Skills */}
               <div className="relative w-full justify-center overflow-hidden lg:w-52">
                 <div
                   ref={scrollableRef}
@@ -75,7 +157,7 @@ const Skills = () => {
                         title={skill.title}
                         width={140}
                         height={140}
-                        className="cursor-pointer opacity-30 hover:opacity-100"
+                        className="cursor-pointer select-none opacity-30 hover:opacity-100"
                         onMouseOver={() => {
                           setInfoText(skill.description);
                           setTitleText(skill.title);
@@ -89,10 +171,10 @@ const Skills = () => {
                   ))}
                 </div>
                 {showTopGradient && (
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-t from-transparent to-white dark:to-black max-md:inset-y-0 max-md:left-0 max-md:bg-gradient-to-l md:h-24"></div>
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-t from-transparent to-white dark:to-black max-md:inset-y-0 max-md:right-0 max-md:h-32 max-md:w-16 max-md:bg-gradient-to-r md:h-24"></div>
                 )}
                 {showBottomGradient && (
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white dark:to-black max-md:inset-y-0 max-md:right-0 max-md:bg-gradient-to-r md:h-24"></div>
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white dark:to-black max-md:inset-y-0 max-md:left-0 max-md:h-32 max-md:w-16 max-md:bg-gradient-to-l md:h-24"></div>
                 )}
               </div>
             </div>
