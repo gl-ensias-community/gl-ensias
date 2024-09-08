@@ -21,8 +21,17 @@ const Skills = () => {
       <Shapes />
       <section id="skills" className="lg:py-18 py-4 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-12 py-64 md:gap-20 md:py-36">
-          <div className="text-4xl font-bold text-primary md:text-5xl">
-            Discover GL ENSIAS Skills
+          <div className="mx-auto max-w-[800px] text-center">
+            <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+              Our Skills
+            </h1>
+            <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+              As GL engineers, we continuously expand our skill set to meet the
+              evolving demands of technology and innovation. This page
+              highlights our core competencies, from agile methodologies and
+              sophisticated algorithms to advanced AI techniques and cloud
+              solutions.
+            </p>
           </div>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
             {skillsData.map((skill) => (
