@@ -7,6 +7,7 @@ import {
   SiApache,
   SiApachecassandra,
   SiApachemaven,
+  SiApachespark,
   SiAzuredevops,
   SiBitbucket,
   SiBootstrap,
@@ -37,12 +38,14 @@ import {
   SiJenkins,
   SiJira,
   SiJquery,
+  SiKeras,
   SiKotlin,
   SiKubernetes,
   SiLaravel,
   SiLinux,
   SiMariadb,
   SiMicrosoftsqlserver,
+  SiMlflow,
   SiMongodb,
   SiMysql,
   SiNeo4J,
@@ -51,23 +54,33 @@ import {
   SiNodedotjs,
   SiNotion,
   SiNpm,
+  SiNumpy,
   SiOcaml,
+  SiOpenai,
+  SiOpencv,
   SiOracle,
+  SiPandas,
   SiPhp,
   SiPostgresql,
   SiPypi,
   SiPython,
+  SiPytorch,
+  SiRasa,
   SiReact,
   SiRedis,
   SiRuby,
   SiRubyonrails,
   SiRust,
+  SiScikitlearn,
+  SiScrapy,
   SiShell,
   SiSlack,
+  SiSpacy,
   SiSpringboot,
   SiSwift,
   SiSymfony,
   SiTailwindcss,
+  SiTensorflow,
   SiTrello,
   SiTypescript,
   SiUml,
@@ -79,14 +92,6 @@ import {
 import { FaJava } from "react-icons/fa";
 
 const toolsData: Tool[] = [
-  // Version Control
-  {
-    id: 1,
-    icon: <SiGit />,
-    name: "Git",
-    category: "Version Control",
-  },
-
   // DevOps
   {
     id: 1,
@@ -286,12 +291,6 @@ const toolsData: Tool[] = [
   },
   {
     id: 1,
-    icon: <></>,
-    name: "Ajax",
-    category: "Web Development",
-  },
-  {
-    id: 1,
     icon: <SiFlask />,
     name: "Flask",
     category: "Web Development",
@@ -350,12 +349,6 @@ const toolsData: Tool[] = [
     id: 1,
     icon: <SiExpo />,
     name: "Expo",
-    category: "Mobile Development",
-  },
-  {
-    id: 1,
-    icon: <></>,
-    name: "Kivy",
     category: "Mobile Development",
   },
   {
@@ -480,6 +473,12 @@ const toolsData: Tool[] = [
   },
   {
     id: 1,
+    icon: <SiGit />,
+    name: "Git",
+    category: "Project Management",
+  },
+  {
+    id: 1,
     icon: <SiGithub />,
     name: "GitHub",
     category: "Project Management",
@@ -518,12 +517,6 @@ const toolsData: Tool[] = [
     id: 1,
     icon: <SiUml />,
     name: "PlantUML",
-    category: "Project Management",
-  },
-  {
-    id: 1,
-    icon: <></>,
-    name: "Merise",
     category: "Project Management",
   },
   
@@ -591,7 +584,85 @@ const toolsData: Tool[] = [
     category: "Build and Dependency Management",
   },
   
-
+  // AI & Machine Learning
+  {
+    id: 1,
+    icon: <SiTensorflow />,
+    name: "TensorFlow",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiKeras />,
+    name: "Keras",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiPytorch />,
+    name: "PyTorch",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiScikitlearn />,
+    name: "Scikit-learn",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiPandas />,
+    name: "Pandas",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiNumpy />,
+    name: "Numpy",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiSpacy />,
+    name: "Spacy",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiScrapy />,
+    name: "Scrapy",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiOpencv />,
+    name: "OpenCV",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiApachespark />,
+    name: "Apache Spark",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiRasa />,
+    name: "Rasa",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiOpenai />,
+    name: "OpenAI",
+    category: "AI & Machine Learning",
+  },
+  {
+    id: 1,
+    icon: <SiMlflow />,
+    name: "MLflow",
+    category: "AI & Machine Learning",
+  }
 ];
 
 export default toolsData;
