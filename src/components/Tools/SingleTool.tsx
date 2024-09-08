@@ -3,17 +3,9 @@ import { Tool } from "@/types/tool";
 const SingleTool = ({ tool }: { tool: Tool }) => {
   const { icon, name } = tool;
   return (
-    <div className="w-full">
-      <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="w-[140px] h-[140px] flex flex-col justify-center items-center p-4 bg-white rounded-lg shadow-lg hover:shadow-xl dark:bg-gray-dark transition-shadow duration-300">
-          <div className="text-4xl mb-2 text-primary">
-            {icon}
-          </div>
-          <h3 className="text-md font-semibold text-center text-gray">
-            {name}
-          </h3>
-        </div>
-      </div>
+    <div className="flex h-[140px] w-[140px] flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-gray-dark">
+      <div className="mb-2 text-4xl text-primary">{icon}</div>
+      <h3 className="text-sm md:text-md text-gray text-center font-semibold">{name}</h3>
     </div>
   );
 };
