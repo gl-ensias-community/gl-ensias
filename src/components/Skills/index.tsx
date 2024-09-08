@@ -1,7 +1,6 @@
 "use client";
 import { Skill } from "@/types/skill";
 import React, { useEffect, useState } from "react";
-import Shapes from "./Shapes";
 import SingleSkill from "./SingleSkill";
 import skillsData from "./skillslData";
 
@@ -25,7 +24,6 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <Shapes />
       <section id="skills" className="lg:py-18 py-4 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-12 py-64 md:gap-20 md:py-36">
           <div className="mx-auto max-w-[800px] text-center">
