@@ -1,6 +1,7 @@
 "use client";
 import { Skill } from "@/types/skill";
 import React, { useEffect, useState } from "react";
+import SectionTitle from "../Common/SectionTitle";
 import SingleSkill from "./SingleSkill";
 import skillsData from "./skillslData";
 
@@ -24,20 +25,17 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <section id="skills" className="lg:py-18 py-4 md:py-8">
-        <div className="container flex flex-col items-center justify-center gap-12 py-64 md:gap-20 md:py-36">
-          <div className="mx-auto max-w-[800px] text-center">
-            <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-              Our Skills
-            </h1>
-            <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-              As GL engineers, we continuously expand our skill set to meet the
+      <section id="skills" className="py-16 md:py-20 lg:py-28">
+        <div className="container">
+          <SectionTitle
+            title="Our Skills"
+            paragraph="As GL engineers, we continuously expand our skill set to meet the
               evolving demands of technology and innovation. This page
               highlights our core competencies, from agile methodologies and
               sophisticated algorithms to advanced AI techniques and cloud
-              solutions.
-            </p>
-          </div>
+              solutions."
+            center
+          />
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
             {skillsData.map((skill) => (
               <SingleSkill
