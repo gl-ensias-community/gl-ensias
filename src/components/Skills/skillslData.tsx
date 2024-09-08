@@ -37,7 +37,7 @@ const skillsData: Skill[] = [
   {
     id: 3,
     icon: <FaBrain />,
-    title: "AI and ML",
+    title: "Arificial Intelligence and Machine Learning",
     description:
       "Expertise in AI/ML technologies, including deep learning, neural networks, and natural language processing, to create intelligent systems capable of autonomous decision-making.",
   },
