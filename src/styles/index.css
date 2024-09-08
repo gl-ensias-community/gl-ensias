@@ -7,7 +7,9 @@
 @layer base {
   body {
     font-family: "Inter", sans-serif;
-    --black: theme("colors.black");
+  }
+  body.no-scroll {
+    overflow: hidden;
   }
 }
 

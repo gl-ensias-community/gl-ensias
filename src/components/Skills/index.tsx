@@ -1,6 +1,6 @@
 "use client";
 import { Skill } from "@/types/skill";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Shapes from "./Shapes";
 import SingleSkill from "./SingleSkill";
 import skillsData from "./skillslData";
@@ -10,12 +10,19 @@ const Skills = () => {
 
   const handleSkillClick = (skill: Skill) => {
     setSelectedSkill(skill);
-    console.log(skill);
+    document.body.classList.add("no-scroll");
   };
 
   const handleClose = () => {
     setSelectedSkill(null);
+    document.body.classList.remove("no-scroll");
   };
+
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
   return (
     <>
       <Shapes />
