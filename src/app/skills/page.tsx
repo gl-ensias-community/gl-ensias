@@ -3,9 +3,9 @@ import Skills from "@/components/Skills";
 import { Metadata } from "next";
 import React from "react";
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Skills | GL ENSIAS",
-  description: "",
+  description: "This is Skills Page for Startup Nextjs Template",
   // other metadata
 };
 
