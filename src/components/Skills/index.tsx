@@ -81,10 +81,10 @@ const Skills = () => {
                     <div className="mb-4 text-5xl text-primary">
                       {selectedSkill.icon}
                     </div>
-                    <h3 className="text-gray mb-4 text-xl font-semibold">
+                    <h3 className="text-gray mb-4 text-center text-xl font-semibold">
                       {selectedSkill.title}
                     </h3>
-                    <p className="text-lg text-body-color">
+                    <p className="hyphens-auto text-lg text-body-color">
                       {selectedSkill.description}
                     </p>
                   </div>
