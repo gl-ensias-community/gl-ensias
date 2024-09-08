@@ -24,7 +24,7 @@ const Skills = () => {
           <div className="text-4xl font-bold text-primary md:text-5xl">
             Discover GL ENSIAS Skills
           </div>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-6 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
             {skillsData.map((skill) => (
               <SingleSkill
                 key={skill.id}
@@ -38,7 +38,7 @@ const Skills = () => {
                 onClick={handleClose}
               >
                 <div
-                  className="relative w-full max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-dark md:w-4/5 lg:w-3/5"
+                  className="relative w-3/5 max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-dark md:w-4/5 lg:w-3/5"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div
