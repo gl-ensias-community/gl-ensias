@@ -2,7 +2,6 @@
 "use client";
 import Image from "next/image";
 import SliderSem from './SliderSem'
-import BoxReveal from "../magicui/BoxReveal";
 import {motion} from 'framer-motion';
 const AboutSectionTwo = () => {
   return (
@@ -27,7 +26,7 @@ const AboutSectionTwo = () => {
        transition={{ duration: .6 }}
        style={{margin: "auto"}} >
       
-                <SliderSem></SliderSem>
+                <SliderSem/>
          </motion.div>
         </div>
       </div>

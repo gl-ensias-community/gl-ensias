@@ -3,7 +3,7 @@ const SectionTitle = ({
   paragraph,
   width = "570px",
   center,
-  mb = "50px",
+  mb = "100px",
 }: {
   title: string;
   paragraph: string;
