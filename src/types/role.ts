@@ -3,3 +3,7 @@ export type Role = {
     title: string;
     description: string;
   };
+export interface RoleProps{
+    role: Role;
+    setSelectedRole: (role: Role | null) => void;
+}

@@ -3,10 +3,11 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import { motion } from "framer-motion";
 import SingleRole from './SingleRole';
+import { Role } from "@/types/role";
 import roles from './RolesData';
 
 export default function Roles() {
-  const [selectedRole, setSelectedRole] = useState(null);
+  const [selectedRole, setSelectedRole] = useState<Role | null>(null);
 
 
   return (
@@ -65,9 +66,7 @@ export default function Roles() {
         {/* Render the selected role modal */}
         {selectedRole && (
           <SingleRole
-            icon={selectedRole.icon}
-            title={selectedRole.title}
-            description={selectedRole.description}
+            role={selectedRole}
             setSelectedRole={setSelectedRole}
           />
         )}

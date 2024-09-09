@@ -1,7 +1,9 @@
 import { FaLaptopCode, FaDatabase, FaCloud, FaCogs } from "react-icons/fa";
 import { MdOutlineArchitecture } from "react-icons/md";
 import { RiBuilding4Line } from "react-icons/ri";
- const roles = [
+import { Role } from "@/types/role";
+
+ const roles:Role[] = [
     {
       icon: <FaLaptopCode />,
       title: "Multimedia Development Engineer",
