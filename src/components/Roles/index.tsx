@@ -78,7 +78,7 @@ export default function Roles() {
     <>
       {/* Section with title */}
       <div className="container">
-        <div className="pb-16 flex justify-center flex-col items-center gap-11">
+        <div style={{marginTop: "40px"}} className="pb-16 flex justify-center flex-col items-center gap-11">
           <div style={{ minHeight: "20vh" }} className="-mx-4 flex flex-wrap items-start text-center">
             <div className="w-full px-4">
               {/* Animation for Section Title */}
