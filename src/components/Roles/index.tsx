@@ -77,6 +77,8 @@ export default function Roles() {
   return (
     <>
       {/* Section with title */}
+    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+
       <div className="container">
         <div className="pb-16 flex justify-center flex-col items-center gap-11">
           <div style={{ minHeight: "20vh" }} className="-mx-4 flex flex-wrap items-start text-center">
@@ -107,7 +109,7 @@ export default function Roles() {
           </div>
         </div>
       </div>
-
+</section>
       {/* Role Cards */}
       <motion.div
        initial={{ opacity: 0, y: 50 }}
