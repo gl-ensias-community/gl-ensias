@@ -34,7 +34,7 @@ const Tools = () => {
                   {category}
                 </h2>
                 <div className="flex w-full flex-col items-center justify-center overflow-hidden relative">
-                  <Marquee pauseOnHover repeat={2}>
+                  <Marquee pauseOnHover>
                     {categories[category].map((tool) => (
                       <SingleTool key={tool.id} tool={tool} />
                     ))}
