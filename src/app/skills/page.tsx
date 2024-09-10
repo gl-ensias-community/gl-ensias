@@ -5,7 +5,7 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Skills | GL ENSIAS",
-  description: "This is Skills Page for Startup Nextjs Template",
+  description: "This is Skills Page for GL ENSIAS",
   // other metadata
 };
 

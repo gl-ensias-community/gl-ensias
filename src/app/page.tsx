@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "GL ENSIAS",
-  description: "This is Home for Startup Nextjs Template",
+  description: "This is Home Page for GL ENSIAS",
   // other metadata
 };
 
