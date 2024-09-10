@@ -2,7 +2,7 @@ import { Tool } from "@/types/tool";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTool from "./SingleTool";
 import toolsData from "./toolsData";
-import Marquee from "@/components/magicui/marquee";
+import Marquee from "@/components/magicui/Marquee";
 
 const Tools = () => {
   // Group tools by categories
