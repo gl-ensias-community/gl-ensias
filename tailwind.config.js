@@ -77,6 +77,20 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
     },
   },
   plugins: [
@@ -84,3 +98,23 @@ module.exports = {
     require('@tailwindcss/forms'),
   ],
 };
+// module.exports = {
+//   theme: {
+//     extend: {
+//       animation: {
+//         marquee: "marquee var(--duration) linear infinite",
+//         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+//       },
+//       keyframes: {
+//         marquee: {
+//           from: { transform: "translateX(0)" },
+//           to: { transform: "translateX(calc(-100% - var(--gap)))" },
+//         },
+//         "marquee-vertical": {
+//           from: { transform: "translateY(0)" },
+//           to: { transform: "translateY(calc(-100% - var(--gap)))" },
+//         },
+//       },
+//     },
+//   },
+// };
