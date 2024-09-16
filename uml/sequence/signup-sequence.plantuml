@@ -8,19 +8,24 @@ participant EmailService as email
 actor Admin as admin
 database DB as db
 
-vis -> auth: Signup request
-auth -->> vis: Signup form
+vis -> auth: Signup request (Personal info + Proof doc)
+note right
+**Proof doc:** Piece of document 
+proving legitimacy of the student
+end note
 
-vis ->> auth: Personal info + credential
 auth ->> db: Store user info
+vis <<-- auth: Signup request received
+
 auth ->> email: Send user info
 email ->> admin: Notify of new signup request
 
 admin ->> auth: Validate signup request
 
 auth -> db: Update account status (active)
-db ->> auth: User info
+db -->> auth: User info
 
-vis <-- auth: Signup successful
+auth ->> email: Send activated account email
+email ->> vis: Account activated
   
 @enduml
