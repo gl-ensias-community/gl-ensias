@@ -7,7 +7,7 @@ import { sendMessage } from "./actions/contact";
 import { getMessages } from "./actions/contact";
 
 const app = express();
-const origin = process.env.CLIENT_ORIGIN || "http://localhost:3000";
+const origin = process.env.ORIGIN || "http://localhost:3000";
 
 const corsOptions = {
   origin: origin,
