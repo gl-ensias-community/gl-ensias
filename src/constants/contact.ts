@@ -1,3 +1,3 @@
 export const constants = {
-    apiUrl: "http://localhost:5000/api/v1",
+    apiUrl: "https://glensias-server.netlify.app/.netlify/functions/api/v1"
 };
