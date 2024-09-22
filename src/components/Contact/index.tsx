@@ -27,7 +27,7 @@ const Contact = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
-
+    
     try {
       const response = await fetch(`${apiUrl}/contact/new`, {
         method: "POST",
