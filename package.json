@@ -9,8 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "migrate": "drizzle-kit generate --schema=./src/db/schemas/*.ts --out=./src/db/migrations/drizzle --dialect=postgresql && node ./src/db/migrations/migrate.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "eslint": "^8.56.0",
