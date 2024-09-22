@@ -1,0 +1,27 @@
+{
+    "name": "gl-ensias-website-server",
+    "version": "1.0.0",
+    "description": "Server for the GL ENSIAS website",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "migrate": "drizzle-kit generate --schema=./src/db/schemas/*.ts --out=./src/db/migrations/drizzle --dialect=postgresql && node ./src/db/migrations/migrate.js"
+    },
+    "keywords": [],
+    "author": "GL ENSIAS",
+    "license": "ISC",
+    "dependencies": {
+        "@supabase/ssr": "^0.5.1",
+        "@supabase/supabase-js": "^2.45.4",
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.33.0",
+        "express": "^4.21.0",
+        "gl-ensias-website-server": "file:",
+        "node": "^22.9.0",
+        "nodemailer": "^6.9.15",
+        "postgres": "^3.4.4",
+        "react-hot-toast": "^2.4.1"
+    }
+}
