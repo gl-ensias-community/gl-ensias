@@ -1,6 +1,6 @@
 "use client";
 import NewsLatterBox from "./NewsLatterBox";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import { useState } from "react";
 import { constants } from "../../constants/constants";
 
@@ -28,31 +28,31 @@ const Contact = () => {
     event.preventDefault();
     setSubmitted(true);
 
-    try {
-      const response = await fetch(`${apiUrl}/sendcontactmessage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    // try {
+    //   const response = await fetch(`${apiUrl}/sendcontactmessage`, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    //   });
 
-      if (response.ok) {
-        setOpen(false);
-        setSuccess(true);
-        toast.success("Successfully sent message!");
-      } else {
-        const errorData = await response.json();
-        setFailure(true);
-        toast.error(`An error occurred: ${errorData.message}`);
-      }
-    } catch (error) {
-      setFailure(true);
-      toast.error("An error occurred while sending the message.");
-      console.error("Error:", error);
-    } finally {
-      setSubmitted(false);
-    }
+    //   if (response.ok) {
+    //     setOpen(false);
+    //     setSuccess(true);
+    //     toast.success("Successfully sent message!");
+    //   } else {
+    //     const errorData = await response.json();
+    //     setFailure(true);
+    //     toast.error(`An error occurred: ${errorData.message}`);
+    //   }
+    // } catch (error) {
+    //   setFailure(true);
+    //   toast.error("An error occurred while sending the message.");
+    //   console.error("Error:", error);
+    // } finally {
+    //   setSubmitted(false);
+    // }
   };
 
   return (
