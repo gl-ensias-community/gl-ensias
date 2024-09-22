@@ -26,14 +26,13 @@ const Tools = () => {
             paragraph="As GL engineers, we harness a broad range of technologies, methodologies, and frameworks that define the software engineering field. This extensive skill set equips us to address complex software development challenges and drive impactful innovation, both in academic research and real-world applications."
             center
           />
-
           <div className="flex flex-col items-center p-4">
             {Object.keys(categories).map((category) => (
               <div key={category} className="mb-12 w-full">
-                <h2 className="mb-5 text-center text-xl md:text-2xl font-bold">
+                <h2 className="mb-5 text-center text-xl font-bold md:text-2xl">
                   {category}
                 </h2>
-                <div className="flex w-full flex-col items-center justify-center overflow-hidden relative">
+                <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
                   <Marquee pauseOnHover>
                     {categories[category].map((tool) => (
                       <SingleTool key={tool.id} tool={tool} />
