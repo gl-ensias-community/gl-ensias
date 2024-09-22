@@ -6,6 +6,8 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/@rewind-ui/core/dist/theme/styles/Sidebar.styles.{cjs,d.ts,d.ts.map,js}',
+    './node_modules/@rewind-ui/core/dist/theme/styles/Calendar.styles.{cjs,d.ts,d.ts.map,js}'
   ],
   darkMode: "class",
   theme: {
@@ -57,7 +59,6 @@ module.exports = {
           light: "#f9f0f0",
         },
       },
-
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",
@@ -75,7 +76,44 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+    require('@tailwindcss/forms'),
+  ],
 };
+// module.exports = {
+//   theme: {
+//     extend: {
+//       animation: {
+//         marquee: "marquee var(--duration) linear infinite",
+//         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+//       },
+//       keyframes: {
+//         marquee: {
+//           from: { transform: "translateX(0)" },
+//           to: { transform: "translateX(calc(-100% - var(--gap)))" },
+//         },
+//         "marquee-vertical": {
+//           from: { transform: "translateY(0)" },
+//           to: { transform: "translateY(calc(-100% - var(--gap)))" },
+//         },
+//       },
+//     },
+//   },
+// };

@@ -1,0 +1,39 @@
+@startuml name Visitor Use Case Diagram
+
+title Visitor Use Case Diagram
+
+actor Visitor
+
+note left of Visitor
+A Visitor is 
+a person who is 
+not logged in
+end note
+
+rectangle "Website" {
+    ' Use Cases for Visitor:
+    usecase "View Home" as view_home
+    usecase "View About" as view_about
+    usecase "View Roles" as view_roles
+    usecase "View Skills" as view_skills
+    usecase "View Tools" as view_tools
+    usecase "View Stats" as view_stats
+    usecase "View Contact" as view_contact
+    usecase "Sign In" as login
+    usecase "Sign Up" as register
+}
+
+left to right direction
+
+' Associations for Visitor
+Visitor --> view_home
+Visitor --> view_about
+Visitor --> view_roles
+Visitor --> view_skills
+Visitor --> view_tools
+Visitor --> view_stats
+Visitor --> view_contact
+Visitor --> login
+Visitor --> register
+
+@enduml

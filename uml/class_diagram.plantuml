@@ -1,0 +1,68 @@
+@startuml
+
+class User {
+  +int id
+  +string email
+  +string password
+  +Date dateJoined
+}
+
+class Member {
+  +int id
+  +string name
+  +string lastName
+  +string tel
+  +string institutEmail
+  +string year
+}
+
+class Resource {
+  +int id
+  +string title
+  +string description
+  +string url
+  +Date createdAt
+  +Date updatedAt
+}
+
+class Post {
+  +int id
+  +string title
+  +string content
+  +string image
+  +Date createdAt
+  +Date updatedAt
+}
+
+class Event {
+  +int id
+  +string description
+  +Date eventDate
+}
+
+enum Role {
+  Admin
+  Member
+}
+
+enum Category {
+  Link
+  Document
+}
+
+enum Tag {
+  Web dev
+  Data science
+  AI
+  DevOps
+}
+
+User "1" -- "0..*" Resource : creates >
+User "1" -- "0..*" Post : writes >
+User "1" -- "0..*" Event : organizes >
+Member "0..1" -- "1" User : is >
+Resource "0..*" -- "1" Category : belongs to >
+Post "0..*" -- "0..*" Tag : tagged >
+User "0..*" -- "1" Role : has >
+
+@enduml

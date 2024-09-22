@@ -1,0 +1,31 @@
+@startuml
+
+title Sequence diagram - Signup
+
+actor Visitor as vis
+participant AuthService as auth
+participant EmailService as email
+actor Admin as admin
+database DB as db
+
+vis -> auth: Signup request (Personal info + Proof doc)
+note right
+**Proof doc:** Piece of document 
+proving legitimacy of the student
+end note
+
+auth ->> db: Store user info
+vis <<-- auth: Signup request received
+
+auth ->> email: Send user info
+email ->> admin: Notify of new signup request
+
+admin ->> auth: Validate signup request
+
+auth -> db: Update account status (active)
+db -->> auth: User info
+
+auth ->> email: Send activated account email
+email ->> vis: Account activated
+  
+@enduml
