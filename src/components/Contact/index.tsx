@@ -1,7 +1,7 @@
 "use client";
-import NewsLatterBox from "./NewsLatterBox";
 import toast from "react-hot-toast";
 import { useState } from "react";
+import { constants } from "@/constants/contact";
 
 const Contact = () => {
   const [isOpen, setOpen] = useState(true);
@@ -15,7 +15,7 @@ const Contact = () => {
     message: "",
   });
 
-  const apiUrl = process.env.ORIGIN + "/api";
+  const apiUrl = constants.apiUrl;
 
   // Handle form inputs
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,31 +27,31 @@ const Contact = () => {
     event.preventDefault();
     setSubmitted(true);
 
-    // try {
-    //   const response = await fetch(`${apiUrl}/sendcontactmessage`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formData),
-    //   });
+    try {
+      const response = await fetch(`${apiUrl}/sendcontactmessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    //   if (response.ok) {
-    //     setOpen(false);
-    //     setSuccess(true);
-    //     toast.success("Successfully sent message!");
-    //   } else {
-    //     const errorData = await response.json();
-    //     setFailure(true);
-    //     toast.error(`An error occurred: ${errorData.message}`);
-    //   }
-    // } catch (error) {
-    //   setFailure(true);
-    //   toast.error("An error occurred while sending the message.");
-    //   console.error("Error:", error);
-    // } finally {
-    //   setSubmitted(false);
-    // }
+      if (response.ok) {
+        setOpen(false);
+        setSuccess(true);
+        toast.success("Successfully sent message!");
+      } else {
+        const errorData = await response.json();
+        setFailure(true);
+        toast.error(`An error occurred: ${errorData.message}`);
+      }
+    } catch (error) {
+      setFailure(true);
+      toast.error("An error occurred while sending the message.");
+      console.error("Error:", error);
+    } finally {
+      setSubmitted(false);
+    }
   };
 
   return (

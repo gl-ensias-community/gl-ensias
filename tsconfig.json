@@ -23,6 +23,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "server/actions/mail.js", "server/index.js"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "server/actions/mail.js", "server/index.js", "server/actions/contact.js", "server/db/schemas/contact.js", "server/db/index.js"],
   "exclude": ["node_modules"]
 }

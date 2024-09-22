@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "migrate": "drizzle-kit generate --schema=./src/db/schemas/*.ts --out=./src/db/migrations/drizzle --dialect=postgresql && node ./src/db/migrations/migrate.js"
+        "migrate": "drizzle-kit generate --schema=./server/db/schemas/*.ts --out=./server/db/migrations/drizzle --dialect=postgresql && node ./server/db/migrations/migrate.js"
     },
     "keywords": [],
     "author": "GL ENSIAS",
