@@ -56,21 +56,18 @@ app.post(`${baseUrl}/contact/new`, async (req, res) => {
   }
 });
 
-app.get(`${baseUrl}/contact/list`, async (req, res) => {
-  try {
-    const messages = await getMessages();
-    if (messages.error) {
-      res.status(500).json({ message: messages.error });
-    } else {
-      res.status(200).json({ messages });
-    }
-  } catch (error) {
-    res.status(500).json({ message: "An error has occurred", error });
-  }
-});
-
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
+// This should not be public
+// app.get(`${baseUrl}/contact/list`, async (req, res) => {
+//   try {
+//     const messages = await getMessages();
+//     if (messages.error) {
+//       res.status(500).json({ message: messages.error });
+//     } else {
+//       res.status(200).json({ messages });
+//     }
+//   } catch (error) {
+//     res.status(500).json({ message: "An error has occurred", error });
+//   }
 // });
 
 const handler = serverless(app);
