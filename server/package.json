@@ -4,7 +4,6 @@
     "description": "Server for the GL ENSIAS website",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
         "migrate": "drizzle-kit generate --schema=./server/db/schemas/*.ts --out=./server/db/migrations/drizzle --dialect=postgresql && node ./server/db/migrations/migrate.js"
     },
     "keywords": [],
@@ -19,8 +18,11 @@
         "drizzle-orm": "^0.33.0",
         "express": "^4.21.0",
         "gl-ensias-website-server": "file:",
+        "netlify-cli": "^17.36.2",
+        "netlify-lambda": "^2.0.16",
         "node": "^22.9.0",
         "nodemailer": "^6.9.15",
-        "postgres": "^3.4.4"
+        "postgres": "^3.4.4",
+        "serverless-http": "^3.2.0"
     }
 }
