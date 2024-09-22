@@ -21,7 +21,6 @@
         "gl-ensias-website-server": "file:",
         "node": "^22.9.0",
         "nodemailer": "^6.9.15",
-        "postgres": "^3.4.4",
-        "react-hot-toast": "^2.4.1"
+        "postgres": "^3.4.4"
     }
 }
