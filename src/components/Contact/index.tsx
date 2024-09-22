@@ -4,7 +4,6 @@ import { useState } from "react";
 import { constants } from "@/constants/contact";
 
 const Contact = () => {
-  const [isOpen, setOpen] = useState(true);
   const [submitted, setSubmitted] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
@@ -28,7 +27,7 @@ const Contact = () => {
     setSubmitted(true);
 
     try {
-      const response = await fetch(`${apiUrl}/sendcontactmessage`, {
+      const response = await fetch(`${apiUrl}/contact/new`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,20 +36,19 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setOpen(false);
         setSuccess(true);
         toast.success("Successfully sent message!");
       } else {
         const errorData = await response.json();
         setFailure(true);
+        setSubmitted(false);
         toast.error(`An error occurred: ${errorData.message}`);
       }
     } catch (error) {
       setFailure(true);
+      setSubmitted(false);
       toast.error("An error occurred while sending the message.");
       console.error("Error:", error);
-    } finally {
-      setSubmitted(false);
     }
   };
 
@@ -137,6 +135,20 @@ const Contact = () => {
                       Submit Your Message
                     </button>
                   </div>
+                  {success && (
+                    <div className="w-full px-4 mt-4">
+                      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                        Your message has been sent.
+                      </div>
+                    </div>
+                  )}
+                  {failure && (
+                    <div className="w-full px-4 mt-4">
+                      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                        An error occurred while sending the message.
+                      </div>
+                    </div>
+                  )}
                 </div>
               </form>
             </div>
