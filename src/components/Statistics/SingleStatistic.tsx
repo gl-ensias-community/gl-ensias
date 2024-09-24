@@ -6,7 +6,7 @@ const SingleStatistic = ({
   statisticValue: StatisticValue;
 }) => {
   return (
-    <div className="w-[300px] md:w-[400px] lg:w-[450px] xl:w-[500px]">
+    <div className="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[700px]">
       <div className="mb-1 flex justify-between">
         <span className="text-base font-medium text-dark dark:text-white">
           {label}
