@@ -1,0 +1,276 @@
+{
+    "GL Graduates By Country": {
+        "Morocco": {
+            "percentage": "51.2%",
+            "ratio": "63/123"
+        },
+        "France": {
+            "percentage": "36.6%",
+            "ratio": "45/123"
+        },
+        "Canada": {
+            "percentage": "4.9%",
+            "ratio": "6/123"
+        },
+        "Finland": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Netherlands": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Spain": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Germany": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Belgium": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "India": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        }
+    },
+    "Self-learning By Domain": {
+        "Web Development": {
+            "percentage": "28.5%",
+            "ratio": "35/123"
+        },
+        "DevOps": {
+            "percentage": "13.0%",
+            "ratio": "16/123"
+        },
+        "Data Science": {
+            "percentage": "8.9%",
+            "ratio": "11/123"
+        },
+        "Algorithms and Data Structures": {
+            "percentage": "6.5%",
+            "ratio": "8/123"
+        },
+        "AI (Machine Learning, Pattern Recognition, Data Mining)": {
+            "percentage": "5.7%",
+            "ratio": "7/123"
+        },
+        "Data Engineering": {
+            "percentage": "5.7%",
+            "ratio": "7/123"
+        },
+        "Cloud Computing": {
+            "percentage": "4.9%",
+            "ratio": "6/123"
+        },
+        "Research & Development": {
+            "percentage": "4.9%",
+            "ratio": "6/123"
+        },
+        "Data Analytics": {
+            "percentage": "3.3%",
+            "ratio": "4/123"
+        },
+        "Mobile Development": {
+            "percentage": "2.4%",
+            "ratio": "3/123"
+        },
+        "Programming Language Theory (Type Theory, Compilers, Languages)": {
+            "percentage": "2.4%",
+            "ratio": "3/123"
+        },
+        "Business and Project Management": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Computer Vision": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Database Management Systems": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Entrepreneurship": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Enterprise Systems (SAP, CRM, Salesforce...)": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "UI/UX": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Blockchain": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Business Intelligence": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Computer Security and Cryptography": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Desktop Development": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Finance and Business Operations": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Hadoop & Big Data": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "IoT": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Testing and Quality Assurance": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Other...": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        }
+    },
+    "PFE By Domain": {
+        "Full Stack Engineering": {
+            "percentage": "43.1%",
+            "ratio": "53/123"
+        },
+        "Back-End Engineering": {
+            "percentage": "13.0%",
+            "ratio": "16/123"
+        },
+        "Data Science": {
+            "percentage": "6.5%",
+            "ratio": "8/123"
+        },
+        "DevOps": {
+            "percentage": "5.7%",
+            "ratio": "7/123"
+        },
+        "Research & Development": {
+            "percentage": "4.9%",
+            "ratio": "6/123"
+        },
+        "Data Engineering": {
+            "percentage": "4.1%",
+            "ratio": "5/123"
+        },
+        "Machine Learning": {
+            "percentage": "4.1%",
+            "ratio": "5/123"
+        },
+        "Enterprise Systems (SAP, CRM, Salesforce, EPM, Odoo...)": {
+            "percentage": "4.1%",
+            "ratio": "5/123"
+        },
+        "Front-End Engineering": {
+            "percentage": "3.3%",
+            "ratio": "4/123"
+        },
+        "Mobile Development": {
+            "percentage": "2.4%",
+            "ratio": "3/123"
+        },
+        "Business Intelligence": {
+            "percentage": "2.4%",
+            "ratio": "3/123"
+        },
+        "Testing and Automation": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Blockchain": {
+            "percentage": "1.6%",
+            "ratio": "2/123"
+        },
+        "Cyber Security": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Finance": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Desktop Development": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Computer Vision": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Quality Assurance": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Cloud": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        },
+        "Artificial Intelligence": {
+            "percentage": "0.8%",
+            "ratio": "1/123"
+        }
+    },
+    "First Job Salary in Morocco": {
+        "8000 - 10000 DH/Mois": {
+            "percentage": "33.8%",
+            "ratio": "27/80"
+        },
+        "12000 - 15000 DH/Mois": {
+            "percentage": "32.5%",
+            "ratio": "26/80"
+        },
+        "10000 - 12000 DH/Mois": {
+            "percentage": "31.3%",
+            "ratio": "25/80"
+        },
+        ">20000 DH/Mois": {
+            "percentage": "2.5%",
+            "ratio": "2/80"
+        }
+    },
+    "First Job Salary Abroad": {
+        "40 000 - 45 000 \u20ac/An": {
+            "percentage": "25.6%",
+            "ratio": "11/43"
+        },
+        "32 500 - 35 000 \u20ac/An": {
+            "percentage": "16.3%",
+            "ratio": "7/43"
+        },
+        "37 500 - 40 000 \u20ac/An": {
+            "percentage": "16.3%",
+            "ratio": "7/43"
+        },
+        "30 000 - 32 500 \u20ac/An": {
+            "percentage": "11.6%",
+            "ratio": "5/43"
+        },
+        ">45 000 \u20ac/An": {
+            "percentage": "11.6%",
+            "ratio": "5/43"
+        },
+        "< 30 000 \u20ac/An": {
+            "percentage": "9.3%",
+            "ratio": "4/43"
+        },
+        "35 000 - 37 500 \u20ac/An": {
+            "percentage": "9.3%",
+            "ratio": "4/43"
+        }
+    }
+}
