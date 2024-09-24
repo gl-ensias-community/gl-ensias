@@ -28,7 +28,7 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="flex flex-col items-center justify-center gap-11 border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="flex flex-col items-center justify-center gap-11">
           <div
             style={{ minHeight: "50vh" }}
             className="-mx-4 flex flex-wrap items-start text-center"
@@ -77,7 +77,7 @@ const AboutSectionOne = () => {
               />
             </motion.div>
 
-            <div className=" mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
+            <div className="max-w-[570px]" data-wow-delay=".15s">
               <div className="mx-[-12px] flex flex-wrap">
                 <div className="w-full px-3">
                   <motion.div
