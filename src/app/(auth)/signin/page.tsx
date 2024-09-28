@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import { login } from './actions'
 
 export const metadata: Metadata = {
   title: "Sign In Page | Free Next.js Template for Startup and SaaS",
@@ -92,6 +93,7 @@ const SigninPage = () => {
                       name="email"
                       placeholder="Enter your Email"
                       className="border-stroke focus-outline-none w-full rounded-sm border bg-gray-lighter px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:ring-primary focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      required
                     />
                   </div>
                   <div className="mb-8">
@@ -106,6 +108,7 @@ const SigninPage = () => {
                       name="password"
                       placeholder="Enter your Password"
                       className="border-stroke w-full rounded-sm border bg-gray-lighter px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:ring-primary focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      required
                     />
                   </div>
                   <div className="mb-8 flex flex-col justify-between sm:flex-row sm:items-center">
@@ -152,7 +155,7 @@ const SigninPage = () => {
                     </div>
                   </div>
                   <div className="mb-6">
-                    <button className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button formAction={login} className="flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
                       Sign in
                     </button>
                   </div>
