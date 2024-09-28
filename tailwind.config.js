@@ -57,6 +57,7 @@ module.exports = {
           ...colors.gray,
           dark: "#21252d",
           light: "#f9f0f0",
+          lighter: "#f8f8f8",
         },
       },
       boxShadow: {
