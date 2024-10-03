@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/netlify/98131d52-4c8c-455a-96f9-c8b5db8a591b?logo=netlify&logoColor=white&color=00C7B7" alt="Netlify">
+<img src="https://api.netlify.com/api/v1/badges/98131d52-4c8c-455a-96f9-c8b5db8a591b/deploy-status" alt="Netlify">
 <img src="https://img.shields.io/github/commit-activity/m/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=orange" alt="GitHub commit activity">
 <img src="https://img.shields.io/github/contributors/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=blueviolet" alt="GitHub contributors">
 <img src="https://img.shields.io/github/issues/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=red" alt="GitHub issues">
