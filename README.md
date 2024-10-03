@@ -1,14 +1,14 @@
 # GL ENSIAS Website
 
-<div align=center>
+<div align="center">
 
-![Netlify](https://img.shields.io/netlify/98131d52-4c8c-455a-96f9-c8b5db8a591b)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/gl-ensias-community/gl-ensias)
-![GitHub contributors](https://img.shields.io/github/contributors/gl-ensias-community/gl-ensias?style=flat)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/gl-ensias-community/gl-ensias)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/gl-ensias-community/gl-ensias)
-![GitHub Discussions](https://img.shields.io/github/discussions/gl-ensias-community/gl-ensias)
-![GitHub Sponsors](https://img.shields.io/github/sponsors/gl-ensias-community)
+<img src="https://img.shields.io/netlify/98131d52-4c8c-455a-96f9-c8b5db8a591b?logo=netlify&logoColor=white&color=00C7B7" alt="Netlify">
+<img src="https://img.shields.io/github/commit-activity/m/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=orange" alt="GitHub commit activity">
+<img src="https://img.shields.io/github/contributors/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=blueviolet" alt="GitHub contributors">
+<img src="https://img.shields.io/github/issues/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=red" alt="GitHub issues">
+<img src="https://img.shields.io/github/issues-pr/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=green" alt="GitHub pull requests">
+<img src="https://img.shields.io/github/discussions/gl-ensias-community/gl-ensias?logo=github&logoColor=white&color=blue" alt="GitHub discussions">
+<img src="https://img.shields.io/github/sponsors/gl-ensias-community?logo=githubsponsors&logoColor=white&color=ff69b4" alt="GitHub sponsors">
 
 </div>
 
