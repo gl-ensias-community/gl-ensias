@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const DashboardPage = () => {
     return (
         <>
-           <h1 className="text-lg">Welcome to the Dashboard</h1>
+           <h1 className="text-lg">Welcome back, </h1>
 
            <div className="mt-8">
             <Calendar />
