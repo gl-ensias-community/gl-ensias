@@ -17,7 +17,9 @@ const Signup = () => {
                 <p className="mb-11 text-center text-base font-medium text-body-color">
                   It’s totally free and super easy
                 </p>
-                <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
+
+                {/* Signin with Google */}
+                {/* <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       width="20"
@@ -52,9 +54,10 @@ const Signup = () => {
                     </svg>
                   </span>
                   Sign in with Google
-                </button>
+                </button> */}
 
-                <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
+                {/* Signin with Github */}
+                {/* <button className="border-stroke mb-6 flex w-full items-center justify-center rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none">
                   <span className="mr-3">
                     <svg
                       fill="currentColor"
@@ -67,14 +70,16 @@ const Signup = () => {
                     </svg>
                   </span>
                   Sign in with Github
-                </button>
-                <div className="mb-8 flex items-center justify-center">
+                </button> */}
+
+                {/* <div className="mb-8 flex items-center justify-center">
                   <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>
                   <p className="w-full px-5 text-center text-base font-medium text-body-color">
                     Or, register with your email
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[60px] bg-body-color/50 sm:block"></span>
-                </div>
+                </div> */}
+                
                 <form>
                   <div className="mb-8">
                     <label

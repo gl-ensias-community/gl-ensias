@@ -4,15 +4,13 @@ class User {
   +int id
   +string email
   +string password
+  +string tel
   +Date dateJoined
 }
 
 class Member {
   +int id
   +string name
-  +string lastName
-  +string tel
-  +string institutEmail
   +string year
 }
 

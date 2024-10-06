@@ -17,6 +17,8 @@ export default async function DashboardPage() {
     if (error || !data?.user) {
         redirect('/signin')
     }
+
+    // console.log(data);
     
     return (
         <>
