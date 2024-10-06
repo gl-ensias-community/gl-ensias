@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import { Calendar } from '@rewind-ui/core';
+import { redirect } from 'next/navigation'
+import { createClient } from '@/utils/supabase/server'
+import SignoutBtn from "@/components/Auth/SignoutBtn";
 
 export const metadata: Metadata = {
     title: "Dashboard Page | Free Next.js Template for Startup and SaaS",
@@ -7,10 +10,19 @@ export const metadata: Metadata = {
     // other metadata
 };
 
-const DashboardPage = () => {
+export default async function DashboardPage() {
+    const supabase = createClient()
+    
+    const { data, error } = await supabase.auth.getUser()
+    if (error || !data?.user) {
+        redirect('/signin')
+    }
+    
     return (
         <>
-           <h1 className="text-lg">Welcome back, </h1>
+           <h1 className="text-lg">Welcome back, {data.user.email}</h1>
+
+           <SignoutBtn />
 
            <div className="mt-8">
             <Calendar />
@@ -18,4 +30,3 @@ const DashboardPage = () => {
         </>
     )
 }
-export default DashboardPage;
