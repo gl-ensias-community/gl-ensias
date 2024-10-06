@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { login } from '@/../server/actions/signin';
+import { login } from '@/actions/signin';
 import { Background } from "@/components/Common/Background";
 
 const Signin = () => {
