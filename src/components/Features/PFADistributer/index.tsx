@@ -167,7 +167,7 @@ const PFADistributer = () => {
                 </tbody>
               </table>
             </div>
-            {teams.length > subjects.length ? (
+            {teams.length < subjects.length ? (
               <>
                 <button
                   className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
@@ -185,7 +185,7 @@ const PFADistributer = () => {
               </>
             ) : (
               <p className="mt-4 text-red-500">
-                Number of teams should be greater than the number of subjects
+                Number of teams should be smaller than the number of subjects
               </p>
             )}
           </div>
@@ -231,7 +231,7 @@ const PFADistributer = () => {
                 </tbody>
               </table>
             </div>
-            {teams.length > subjects.length ? (
+            {teams.length < subjects.length ? (
               <>
                 <select
                   onChange={(e) => setChoosenSubject(e.target.value)}
@@ -252,7 +252,7 @@ const PFADistributer = () => {
               </>
             ) : (
               <p className="mt-4 text-red-500">
-                Number of teams should be greater than the number of subjects
+                Number of teams should be smaller than the number of subjects
               </p>
             )}
           </div>
