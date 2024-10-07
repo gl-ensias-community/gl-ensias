@@ -139,33 +139,47 @@ const PFADistributer = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {teams.map((team, index) => (
-                    <tr
-                      key={index}
-                      className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
-                    >
-                      <td>{index + 1}</td>
-                      {team.map((member, memberIndex) => (
-                        <td key={memberIndex}>{member}</td>
-                      ))}
+                  {teams.length > 0 ? (
+                    teams.map((team, index) => (
+                      <tr
+                        key={index}
+                        className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                      >
+                        <td>{index + 1}</td>
+                        {team.map((member, memberIndex) => (
+                          <td key={memberIndex}>{member}</td>
+                        ))}
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={4}>No teams available</td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </table>
             </div>
-            <button
-              className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
-              onClick={chooseRandomTeam}
-            >
-              Choose Random Team
-            </button>
-            <div className="mt-4 text-center">
-              <p className="rounded-lg bg-gray-50 dark:bg-gray-700 py-8 text-sm text-gray-900 dark:text-gray-400">
-                {choosenTeam.length > 0
-                  ? `Choosen Team: ${choosenTeam.join(", ")}`
-                  : "No team choosen"}
+            {teams.length > subjects.length ? (
+              <>
+                <button
+                  className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
+                  onClick={chooseRandomTeam}
+                >
+                  Choose Random Team
+                </button>
+                <div className="mt-4 text-center">
+                  <p className="rounded-lg bg-gray-50 py-8 text-sm text-gray-900 dark:bg-gray-700 dark:text-gray-400">
+                    {choosenTeam.length > 0
+                      ? `Choosen Team: ${choosenTeam.join(", ")}`
+                      : "No team choosen"}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <p className="mt-4 text-red-500">
+                Number of teams should be greater than the number of subjects
               </p>
-            </div>
+            )}
           </div>
           <div>
             <h2 className="mb-4 text-2xl font-bold">Available Subjects</h2>
@@ -191,34 +205,48 @@ const PFADistributer = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {subjects.map((subject, index) => (
-                    <tr
-                      key={index}
-                      className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
-                    >
-                      <td>{index + 1}</td>
-                      <td>{subject}</td>
+                  {subjects.length > 0 ? (
+                    subjects.map((subject, index) => (
+                      <tr
+                        key={index}
+                        className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                      >
+                        <td>{index + 1}</td>
+                        <td>{subject}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={2}>No subjects available</td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </table>
             </div>
-            <select
-              onChange={(e) => setChoosenSubject(e.target.value)}
-              className="mt-4 block w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
-            >
-              {subjects.map((subject, index) => (
-                <option key={index} value={subject}>
-                  {subject}
-                </option>
-              ))}
-            </select>
-            <button
-              className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
-              onClick={handleAssignment}
-            >
-              Assign Team to Subject
-            </button>
+            {teams.length > subjects.length ? (
+              <>
+                <select
+                  onChange={(e) => setChoosenSubject(e.target.value)}
+                  className="mt-4 block w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
+                >
+                  {subjects.map((subject, index) => (
+                    <option key={index} value={subject}>
+                      {subject}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
+                  onClick={handleAssignment}
+                >
+                  Assign Team to Subject
+                </button>
+              </>
+            ) : (
+              <p className="mt-4 text-red-500">
+                Number of teams should be greater than the number of subjects
+              </p>
+            )}
           </div>
         </div>
         <div className="grid grid-cols-1">
