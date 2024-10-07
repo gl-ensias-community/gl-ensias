@@ -32,6 +32,9 @@ const PFADistributer = () => {
    * @returns {void}
    */
   const handleAssignment = () => {
+    if (choosenTeam.length === 0 || choosenSubject === "")
+      return alert("Please choose a team and a subject");
+    
     // Remove the team from the available teams
     const newTeams = teams.filter((team) => team !== choosenTeam);
     setTeams(newTeams);
@@ -47,6 +50,10 @@ const PFADistributer = () => {
       ...assignments,
       { team: choosenTeam, subject: choosenSubject },
     ]);
+
+    // Reset the choosen team and subject
+    setChoosenTeam([]);
+    setChoosenSubject("");
   };
 
   /**
@@ -55,11 +62,10 @@ const PFADistributer = () => {
    * @returns {void}
    */
   const exportAssignments = () => {
-    const csv = `Team;Subject\n${assignments
-      .map((assignment) => {
-        return `${assignment.team.join(",")};${assignment.subject}`;
-      })
-      .join("\n")}`;
+    let csv = "Team;Subject\n";
+    assignments.forEach((assignment) => {
+      csv += `${assignment.team.join(",")};${assignment.subject}\n`;
+    });
 
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
@@ -80,7 +86,7 @@ const PFADistributer = () => {
     const reader = new FileReader();
     reader.onload = (event) => {
       const content = event.target.result as string;
-      const teams = content.split("\n").map((line) => line.split(";"));
+      const teams = content.split("\n").map((line) => line.split(","));
       setTeams(teams);
     };
     reader.readAsText(file);
