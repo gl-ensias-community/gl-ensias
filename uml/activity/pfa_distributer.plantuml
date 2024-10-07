@@ -1,12 +1,6 @@
 @startuml
 start
 
-note right
-  A: List of Assignments
-  T: List of Teams
-  S: List of Subjects
-end note
-
 :Upload list of Teams (T);
 :Upload list of Subjects (S);
 
