@@ -34,7 +34,7 @@ const PFADistributer = () => {
   const handleAssignment = () => {
     if (choosenTeam.length === 0 || choosenSubject === "")
       return alert("Please choose a team and a subject");
-    
+
     // Remove the team from the available teams
     const newTeams = teams.filter((team) => team !== choosenTeam);
     setTeams(newTeams);
@@ -64,6 +64,8 @@ const PFADistributer = () => {
   const exportAssignments = () => {
     let csv = "Team;Subject\n";
     assignments.forEach((assignment) => {
+      assignment.team = assignment.team.map((member) => member.trim());
+      assignment.subject = assignment.subject.trim();
       csv += `${assignment.team.join(",")};${assignment.subject}\n`;
     });
 
@@ -136,7 +138,7 @@ const PFADistributer = () => {
 
             <div className="relative overflow-x-auto shadow-md shadow-md sm:rounded-lg">
               <table className="w-full table-fixed text-center text-sm text-gray-500 dark:text-gray-400">
-                <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th className="w-[10%] py-3">ID</th>
                     <th className="py-3">Member&nbsp;1</th>
@@ -149,7 +151,7 @@ const PFADistributer = () => {
                     teams.map((team, index) => (
                       <tr
                         key={index}
-                        className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                        className="odd:bg-white even:bg-gray-100 odd:dark:bg-dark even:dark:bg-black"
                       >
                         <td>{index + 1}</td>
                         {team.map((member, memberIndex) => (
@@ -204,7 +206,7 @@ const PFADistributer = () => {
             />
             <div className="relative overflow-x-auto shadow-md shadow-md sm:rounded-lg">
               <table className="w-full table-fixed text-center text-sm text-gray-500 dark:text-gray-400">
-                <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th className="w-[10%] py-3">ID</th>
                     <th className="py-3">Subject</th>
@@ -215,7 +217,7 @@ const PFADistributer = () => {
                     subjects.map((subject, index) => (
                       <tr
                         key={index}
-                        className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                        className="odd:bg-white even:bg-gray-100 odd:dark:bg-dark even:dark:bg-black"
                       >
                         <td>{index + 1}</td>
                         <td>{subject}</td>
@@ -260,7 +262,7 @@ const PFADistributer = () => {
             <h2 className="mb-4 text-2xl font-bold">Assignments</h2>
             <div className="relative overflow-x-auto shadow-md shadow-md sm:rounded-lg">
               <table className="w-full table-fixed text-center text-sm text-gray-500 dark:text-gray-400">
-                <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th className="w-[10%] py-3">ID</th>
                     <th className="py-3">Team</th>
@@ -271,7 +273,7 @@ const PFADistributer = () => {
                   {assignments.map((assignment, index) => (
                     <tr
                       key={index}
-                      className="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                      className="odd:bg-white even:bg-gray-100 odd:dark:bg-dark even:dark:bg-black"
                     >
                       <td>{index + 1}</td>
                       <td>{assignment.team.join(", ")}</td>
@@ -281,12 +283,16 @@ const PFADistributer = () => {
                 </tbody>
               </table>
             </div>
-            <button
-              className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
-              onClick={exportAssignments}
-            >
-              Export Assignments
-            </button>
+            {assignments.length > 0 ? (
+              <button
+                className="mt-4 rounded-md bg-primary/90 px-4 py-2 text-white"
+                onClick={exportAssignments}
+              >
+                Export Assignments
+              </button>
+            ) : (
+              <p className="mt-4 text-red-500">No assignments available</p>
+            )}
           </div>
         </div>
       </div>
