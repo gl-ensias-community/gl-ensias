@@ -2,16 +2,14 @@
 import SectionTitle from "@/components/Common/SectionTitle";
 import { useState } from "react";
 
-type Team = string[]; // A team consists of an array of members (binome or trinome)
+type Team = string[]; // A team consists of an array of members
 type Assignment = { team: Team; subject: string }; // Assignment structure
 
 const PFADistributer = () => {
-  // Initialize subjects and teams
   const [subjects, setSubjects] = useState<string[]>([]);
   const [choosenSubject, setChoosenSubject] = useState<string>("");
   const [teams, setTeams] = useState<Team[]>([]);
   const [choosenTeam, setChoosenTeam] = useState<Team>([]);
-
   const [assignments, setAssignments] = useState<Assignment[]>([]);
 
   /**
@@ -27,8 +25,6 @@ const PFADistributer = () => {
   /**
    * Assign a team to a subject
    *
-   * @param {number} teamIndex - Index of the selected team
-   * @param {number} subjectIndex - Index of the selected subject
    * @returns {void}
    */
   const handleAssignment = () => {
