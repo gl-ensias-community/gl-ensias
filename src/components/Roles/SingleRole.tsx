@@ -9,7 +9,7 @@ import { RoleProps } from '@/types/role';
 const SingleRole:React.FC<RoleProps> = ({role, setSelectedRole}) => {
   return (
     <motion.div
-    className='fixed inset-0 z-50 flex items-center justify-center'
+      className='fixed inset-0 z-50 flex items-center justify-center'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
@@ -17,7 +17,7 @@ const SingleRole:React.FC<RoleProps> = ({role, setSelectedRole}) => {
     >
       {/* Modal rendering */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+        className="fixed inset-0 bg-neutral-400 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-90 flex justify-center items-center z-50"
         onClick={()=>setSelectedRole(null)}
       >
         <motion.div

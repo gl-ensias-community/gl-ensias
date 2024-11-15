@@ -63,7 +63,11 @@ const Skills = () => {
                   className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-400 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-90"
                   onClick={handleClose}
                 >
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="relative w-3/5 max-w-4xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-dark md:w-4/5 lg:w-3/5"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -100,7 +104,7 @@ const Skills = () => {
                         {selectedSkill.description}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               )}
             </div>

@@ -39,7 +39,7 @@ export default function Statistics() {
             </div>
             <div className="flex flex-col items-center justify-center gap-11">
               {statistics.map((statistic: Statistic, index: number) => (
-                <div key={index} className="flex flex-col gap-4 p-4 rounded-md bg-white shadow-three dark:bg-gray-dark">
+                <div key={index} className="flex flex-col gap-4 p-4 rounded-lg bg-white shadow-three dark:bg-gray-dark">
                   <h2 className="text-xl font-bold text-center text-primary/75">
                     {statistic.name}
                   </h2>

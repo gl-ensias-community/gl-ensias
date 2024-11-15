@@ -62,7 +62,7 @@ export default function SemesterSlider() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className={`p-6 rounded-md shadow-three dark:bg-gray-dark w-full max-w-4xl text-center`}
+        className={`p-6 rounded-lg shadow-three dark:bg-gray-dark w-full max-w-4xl text-center`}
       >
         {semesters.find((semester) => semester.id === selectedSemester)?.content}
       </motion.div>
