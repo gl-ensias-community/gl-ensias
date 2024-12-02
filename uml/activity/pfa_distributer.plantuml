@@ -1,0 +1,23 @@
+@startuml
+start
+
+fork
+:Upload list of Teams (T);
+fork again
+:Upload list of Subjects (S);
+end fork
+
+if (S < T or T is empty or S is empty) then (yes)
+    :Error: Not enough subjects or teams;
+    stop
+else (no)
+    while (T is not empty?) is (yes)
+        :Randomly select a team 't' from T;
+        :Team 't' chooses a subject 's' from S;
+        :Assign (t, s) to the list of Assignments (A);
+    endwhile (no)
+    :Export A;
+    stop
+endif
+
+@enduml
