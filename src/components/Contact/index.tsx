@@ -1,22 +1,18 @@
 "use client";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { constants } from "@/constants/contact";
+import { FormEvent, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [failure, setFailure] = useState(false);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const apiUrl = constants.apiUrl;
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   // Handle form inputs
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,34 +20,28 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  // Handle form submission
+  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    setSuccess(false);
+    setError(false);
+    setSending(true);
     event.preventDefault();
-    setSubmitted(true);
-    
-    try {
-      const response = await fetch(`${apiUrl}/contact/new`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
+    const formData = new FormData(event.target as HTMLFormElement);
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        setSending(false);
         setSuccess(true);
         toast.success("Successfully sent message!");
-      } else {
-        const errorData = await response.json();
-        setFailure(true);
-        setSubmitted(false);
-        toast.error(`An error occurred: ${errorData.message}`);
-      }
-    } catch (error) {
-      setFailure(true);
-      setSubmitted(false);
-      toast.error("An error occurred while sending the message.");
-      console.error("Error:", error);
-    }
+      })
+      .catch(() => {
+        setSending(false);
+        setError(true);
+        toast.error("An error occurred while sending the message.");
+      });
   };
 
   return (
@@ -87,7 +77,8 @@ const Contact = () => {
                 <p className="mb-12 text-base font-medium text-body-color">
                   Our support team will get back to you ASAP via email.
                 </p>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleFormSubmit} data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2">
                       <div className="mb-8">
@@ -147,13 +138,22 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button
-                        type="submit"
-                        className="rounded-xl shadow-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-                        disabled={submitted}
-                      >
-                        Submit Your Message
-                      </button>
+                        {sending ? (
+                        <button
+                          type="button"
+                          className="rounded-xl shadow-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark cursor-not-allowed"
+                          disabled
+                        >
+                          Sending...
+                        </button>
+                      ) : (
+                        <button
+                          type="submit"
+                          className="rounded-xl shadow-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                        >
+                          Submit Your Message
+                        </button>
+                      )}
                     </div>
                     {success && (
                       <div className="w-full px-4 mt-4">
@@ -162,7 +162,7 @@ const Contact = () => {
                         </div>
                       </div>
                     )}
-                    {failure && (
+                    {error && (
                       <div className="w-full px-4 mt-4">
                         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
                           An error occurred while sending the message.
