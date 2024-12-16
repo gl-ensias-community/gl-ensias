@@ -15,7 +15,9 @@ const Contact = () => {
   const [error, setError] = useState(false);
 
   // Handle form inputs
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -64,8 +66,8 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.6 }}
-        >  
-          <div className="pb-16 flex justify-center flex-col items-center">
+        >
+          <div className="flex flex-col items-center justify-center pb-16">
             <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
               <div
                 className="mb-12 rounded-lg bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
@@ -77,7 +79,11 @@ const Contact = () => {
                 <p className="mb-12 text-base font-medium text-body-color">
                   Our support team will get back to you ASAP via email.
                 </p>
-                <form onSubmit={handleFormSubmit} data-netlify="true">
+                <form
+                  onSubmit={handleFormSubmit}
+                  data-netlify-recaptcha="true"
+                  data-netlify="true"
+                >
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2">
@@ -138,10 +144,10 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                        {sending ? (
+                      {sending ? (
                         <button
                           type="button"
-                          className="rounded-xl shadow-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark cursor-not-allowed"
+                          className="cursor-not-allowed rounded-xl bg-primary px-9 py-4 text-base font-medium text-white shadow-lg shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                           disabled
                         >
                           Sending...
@@ -149,22 +155,25 @@ const Contact = () => {
                       ) : (
                         <button
                           type="submit"
-                          className="rounded-xl shadow-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                          className="rounded-xl bg-primary px-9 py-4 text-base font-medium text-white shadow-lg shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                         >
                           Submit Your Message
                         </button>
                       )}
                     </div>
+                    <div className="w-full px-4">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
                     {success && (
-                      <div className="w-full px-4 mt-4">
-                        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                      <div className="mt-4 w-full px-4">
+                        <div className="relative rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700">
                           Your message has been sent.
                         </div>
                       </div>
                     )}
                     {error && (
-                      <div className="w-full px-4 mt-4">
-                        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                      <div className="mt-4 w-full px-4">
+                        <div className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700">
                           An error occurred while sending the message.
                         </div>
                       </div>
