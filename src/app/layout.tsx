@@ -25,6 +25,30 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <meta
+          property="og:image"
+          content="https://glensias.ma/preview.png"
+        />
+        <meta property="og:title" content="GL ENSIAS" />
+        <meta
+          property="og:description"
+          content="GL ENSIAS Website"
+        />
+        <meta property="og:site_name" content="GL ENSIAS" />
+        <meta property="og:url" content="https://glensias.ma" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="keywords" content="ENSIAS, GL, Software, Engineering, Genie, Logiciel" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="GL ENSIAS" />
+        <meta
+          name="twitter:description"
+          content="GL ENSIAS Website"
+        />
+        <meta
+          name="twitter:image"
+          content="https://glensias.ma/preview.png"
+        />
       </head>
       {pathName.startsWith("/dashboard") ? (
         <body>
