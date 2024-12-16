@@ -80,6 +80,7 @@ const Contact = () => {
                   Our support team will get back to you ASAP via email.
                 </p>
                 <form
+                  method="POST"
                   onSubmit={handleFormSubmit}
                   data-netlify-recaptcha="true"
                   data-netlify="true"
@@ -144,6 +145,9 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
+                    <div className="w-full px-4">
                       {sending ? (
                         <button
                           type="button"
@@ -160,9 +164,6 @@ const Contact = () => {
                           Submit Your Message
                         </button>
                       )}
-                    </div>
-                    <div className="w-full px-4">
-                      <div data-netlify-recaptcha="true"></div>
                     </div>
                     {success && (
                       <div className="mt-4 w-full px-4">
